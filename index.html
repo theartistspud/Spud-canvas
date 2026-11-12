@@ -168,13 +168,12 @@ svg.draw path.guide { stroke: none; }
 .type-card .tc-name { font: 400 84px/0.9 "CETS Neue", var(--display); }
 .type-card .tc-glyphs { font: 400 44px/1.15 "CETS Neue", var(--display); color: #F2F2F2; word-break: break-all; }
 .type-card .tc-note { margin-top: auto; font: 500 16px/1.35 var(--note); color: #A6A6AC; }
-/* Section highlighter: one marker colour per section (Artsy pink, Design blue, Creative Direction CETS lime) */
-.mk-art { --hlc: #FFB3CF; } .mk-des { --hlc: #A9DCF5; } .mk-cd { --hlc: #E2FF1E; } .mk-me { --hlc: #FFE680; }
+/* CETS project highlighter: one marker colour per project (web lime, campaign pink, brand world cyan, merch orange) */
+.mk-web { --hlc: #E2FF1E; } .mk-camp { --hlc: #FF8AC4; } .mk-world { --hlc: #7DF3FF; } .mk-merch { --hlc: #FFB547; }
 .mk { padding: 0 10px; margin-left: -10px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
   background: linear-gradient(transparent 50%, var(--hlc) 50%, var(--hlc) 90%, transparent 90%); }
-.drop-name { --lime: #E2FF1E; }
 /* CETS DRIP: drop wall on the canvas, CETS lime as the only accent */
-.drip { --lime: #E2FF1E; z-index: 1; }
+.drip { --lime: #FFB547; z-index: 1; }
 .drip-title { position: absolute; left: 20px; top: 14px; margin: 0; font-family: var(--display); font-weight: 400; font-size: 150px; line-height: 1; color: var(--ink); letter-spacing: .01em; }
 .drip-title span, .drop-name, .hl { background: linear-gradient(transparent 52%, var(--lime) 52%, var(--lime) 88%, transparent 88%); }
 .drop-name { position: absolute; z-index: 0; padding: 0 8px; font-family: var(--display); line-height: .9; color: var(--ink); white-space: nowrap; transform: rotate(var(--r)); letter-spacing: .01em; }
@@ -377,7 +376,7 @@ svg.draw path.guide { stroke: none; }
 
     <!-- ABOUT ME -->
     <div class="abs" style="left:-1020px; top:120px; width:680px;">
-      <h2 class="zone-title" style="text-align:center;"><span class="mk mk-me" style="margin-left:0;">ABOUT ME</span></h2>
+      <h2 class="zone-title" style="text-align:center;">ABOUT ME</h2>
       <p class="hello" style="margin:16px 0 14px 14px;">hEllo!<br>I'm Ashilesh aka SPUD!</p>
       <button class="resume" id="resumeBtn" type="button" aria-label="Open resume full size">
         <img id="resumeImg" src="resume-t.webp" data-hi="resume-full.webp" decoding="async" alt="Spud's illustrated resume: creative director at CETS since 2024, freelance illustrator since 2016, expertise and contact details." draggable="false">
@@ -406,7 +405,7 @@ svg.draw path.guide { stroke: none; }
 
     <!-- CATEGORY CLUSTERS: what the right arrow points at -->
     <button class="abs cluster pile" type="button" data-cat="artsy" style="left:330px; top:190px; width:310px; height:270px;" aria-label="Open Artsy: illustration, characters, portraits, emotes">
-      <span class="cluster-title mk mk-art" style="top:-22px;">ARTSY</span>
+      <span class="cluster-title" style="top:-22px;">ARTSY</span>
       <span class="pc" style="left:6px; top:40px; width:150px; height:150px; --r:-9deg; --dx:-14px; --dy:6px;"><img src="work/charillo-3-t.webp" alt="" draggable="false"></span>
       <span class="pc" style="left:150px; top:30px; width:150px; height:150px; --r:7deg; --dx:14px; --dy:-4px;"><img src="work/portrait-2-t.webp" alt="" draggable="false"></span>
       <span class="pc" style="left:40px; top:120px; width:170px; height:120px; --r:3deg; --dx:-6px; --dy:12px;"><img src="illo/boat-t.webp" alt="" draggable="false"></span>
@@ -414,7 +413,7 @@ svg.draw path.guide { stroke: none; }
       <span class="pc cut" style="left:228px; top:150px; width:84px; height:100px; --r:12deg; --dx:16px; --dy:8px;"><img src="work/emote-18.webp" alt="" draggable="false"></span>
     </button>
     <button class="abs cluster folder" type="button" data-cat="design" style="left:1000px; top:290px;" aria-label="Open Design: logos, UI, game art">
-      <span class="cluster-title mk mk-des">DESIGN</span>
+      <span class="cluster-title">DESIGN</span>
       <span class="f-back"></span>
       <span class="f-file" style="left:22px; --r:-8deg;"><img src="work/logo-1.webp" alt="" draggable="false"></span>
       <span class="f-file" style="left:78px; --r:3deg;"><img src="work/logo-12.webp" alt="" draggable="false"></span>
@@ -422,7 +421,7 @@ svg.draw path.guide { stroke: none; }
       <span class="f-front"></span>
     </button>
     <button class="abs cluster frame" type="button" data-cat="cd" style="left:665px; top:860px;" aria-label="Open Creative Direction: CETS websites, campaigns, assets, podcasts, merch">
-      <span class="cluster-title mk mk-cd" style="left:-55px;">CREATIVE DIRECTION</span>
+      <span class="cluster-title" style="left:-55px;">CREATIVE DIRECTION</span>
       <span class="fr-board">
         <span class="fr-pin" style="left:10px; top:12px; width:120px; height:78px; --r:-4deg;"><img src="illo/cets-on-crack-t.webp" alt="" draggable="false"></span>
         <span class="fr-pin" style="left:126px; top:8px; width:94px; height:94px; --r:5deg;"><img src="illo/cets-room-t.webp" alt="" draggable="false"></span>
@@ -436,11 +435,11 @@ svg.draw path.guide { stroke: none; }
   <!-- WORK CANVAS: its own infinite board, categories side by side -->
   <div id="work" class="board" hidden>
     <!-- CATEGORY AREAS, side by side: Artsy then Design -->
-    <section class="abs part" style="left:-5070px; top:130px; width:4680px; height:4990px;" aria-label="Creative Direction"><h2 class="part-title mk mk-cd">CREATIVE DIRECTION</h2></section>
-    <section class="abs part" style="left:380px; top:130px; width:4410px; height:3740px;" aria-label="Artsy"><h2 class="part-title mk mk-art">ARTSY</h2></section>
-    <section class="abs part" style="left:5180px; top:130px; width:2640px; height:3240px;" aria-label="Design"><h2 class="part-title mk mk-des">DESIGN</h2></section>
-    <h2 class="abs zone-title mk mk-des" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h2>
-    <h2 class="abs zone-title mk mk-des" style="left:6520px; top:200px; font-size:48px;">GAME ART</h2>
+    <section class="abs part" style="left:-5070px; top:130px; width:4680px; height:4990px;" aria-label="Creative Direction"><h2 class="part-title">CREATIVE DIRECTION</h2></section>
+    <section class="abs part" style="left:380px; top:130px; width:4410px; height:3740px;" aria-label="Artsy"><h2 class="part-title">ARTSY</h2></section>
+    <section class="abs part" style="left:5180px; top:130px; width:2640px; height:3240px;" aria-label="Design"><h2 class="part-title">DESIGN</h2></section>
+    <h2 class="abs zone-title" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h2>
+    <h2 class="abs zone-title" style="left:6520px; top:200px; font-size:48px;">GAME ART</h2>
     <p class="abs sublabel" style="left:6524px; top:296px; white-space:nowrap;">SKILL ICONS</p>
     <!-- CETS DRIP: drop wall. Giant drop names, photos pinned over them, hand-written notes, CETS lime as the accent -->
     <!-- CREATIVE DIRECTION: CETS -->
@@ -459,22 +458,22 @@ svg.draw path.guide { stroke: none; }
       <span class="tc-glyphs">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ<br>0123456789<br>+ - / ? : ; [ ]</span>
       <span class="tc-note">Designed in-house for the CETS brand. Used across the site, merch and campaigns, and for the titles in this section.</span>
     </div>
-    <h2 class="abs zone-title proj-title mk mk-cd" style="left:-5000px; top:1100px;">WEBSITE · CETS.WTF</h2>
+    <h2 class="abs zone-title proj-title mk mk-web" style="left:-5000px; top:1100px;">WEBSITE · CETS.WTF</h2>
     <p class="abs proj-desc" style="left:-4998px; top:1166px;">Designed and directed the brand’s home on the internet, from landing hero and navigation to every page and mobile layout.</p>
     <p class="abs proj-role" style="left:-4998px; top:1198px;">Art direction · UX/UI · Illustration</p>
     <a class="abs ui-visit" href="https://cets.wtf/" target="_blank" rel="noopener" style="left:-4380px; top:1110px;">visit cets.wtf ↗</a>
     <p class="abs sublabel" style="left:-2586px; top:1200px;">PAGES</p>
-    <h2 class="abs zone-title proj-title mk mk-cd" style="left:-2590px; top:1770px;">ROADMAP: WHAT’S NEXT</h2>
+    <h2 class="abs zone-title proj-title mk mk-web" style="left:-2590px; top:1770px;">ROADMAP: WHAT’S NEXT</h2>
     <p class="abs proj-desc" style="left:-2588px; top:1836px;">A living roadmap system that turned upcoming drops and events into collectible cards.</p>
     <p class="abs proj-role" style="left:-2588px; top:1868px;">UX/UI · System design</p>
     <p class="abs sublabel" style="left:-1656px; top:1882px;">CETS DRIP · DROP PAGE</p>
-    <h2 class="abs zone-title proj-title mk mk-cd" style="left:-5000px; top:2622px;">CAMPAIGN: FOMO × CETS</h2>
+    <h2 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:2622px;">CAMPAIGN: FOMO × CETS</h2>
     <p class="abs proj-desc" style="left:-4998px; top:2688px;">A launch campaign built on the brand line “the lifestyle for the real and unapologetic.”</p>
     <p class="abs proj-role" style="left:-4998px; top:2720px;">Concept · Art direction · Design</p>
-    <h2 class="abs zone-title proj-title mk mk-cd" style="left:-3730px; top:2622px;">BRAND WORLD &amp; IP</h2>
+    <h2 class="abs zone-title proj-title mk mk-world" style="left:-3730px; top:2622px;">BRAND WORLD &amp; IP</h2>
     <p class="abs proj-desc" style="left:-3728px; top:2688px;">Built the Cetsworld universe: story, characters, Ceticatures and the four pillars the brand stands on.</p>
     <p class="abs proj-role" style="left:-3728px; top:2720px;">Worldbuilding · Illustration · Content</p>
-    <h2 class="abs zone-title proj-title mk mk-cd" style="left:-5000px; top:3540px;">MERCH DROPS</h2>
+    <h2 class="abs zone-title proj-title mk mk-merch" style="left:-5000px; top:3540px;">MERCH DROPS</h2>
     <p class="abs proj-desc" style="left:-4998px; top:3606px;">Five drops from concept to unboxing: apparel, packaging, eyewear and lookbooks.</p>
     <p class="abs proj-role" style="left:-4998px; top:3638px;">Product design · Packaging · Art direction</p>
     <p class="abs sublabel" style="left:-2366px; top:3760px;">MOCKUPS</p>
@@ -540,15 +539,15 @@ svg.draw path.guide { stroke: none; }
     <img class="abs dino-px" data-src="work/dino/life.webp" alt="" draggable="false" decoding="async" style="left:7316px; top:1354px; width:118px; height:112px;">
     <img class="abs dino-px" data-src="work/dino/cross.webp" alt="" draggable="false" decoding="async" style="left:7454px; top:1362px; width:92px; height:96px;">
     <img class="abs dino-px" data-src="work/dino/dead.webp" alt="" draggable="false" decoding="async" style="left:7566px; top:1350px; width:113px; height:120px;">
-    <h2 class="abs zone-title mk mk-des" style="left:5240px; top:2100px; font-size:48px;">CARD GAME DESIGN</h2>
+    <h2 class="abs zone-title" style="left:5240px; top:2100px; font-size:48px;">CARD GAME DESIGN</h2>
 
     <!-- ILLUSTRATION: loose pinned pieces -->
-    <h2 class="abs zone-title mk mk-art" style="left:432px; top:196px; font-size:48px;">ILLUSTRATION</h2>
+    <h2 class="abs zone-title" style="left:432px; top:196px; font-size:48px;">ILLUSTRATION</h2>
     <p class="abs sublabel" style="left:436px; top:262px;">ILLUSTRATIONS</p>
     <p class="abs sublabel" style="left:436px; top:1430px;">CHARACTER ILLUSTRATIONS</p>
-    <h2 class="abs zone-title mk mk-art" style="left:2320px; top:250px; font-size:48px;">CHARACTER DESIGN</h2>
-    <h2 class="abs zone-title mk mk-art" style="left:4020px; top:250px; font-size:48px;">CREATURE DESIGN</h2>
-    <h2 class="abs zone-title mk mk-art" style="left:1874px; top:810px; font-size:48px;">COMICS</h2>
+    <h2 class="abs zone-title" style="left:2320px; top:250px; font-size:48px;">CHARACTER DESIGN</h2>
+    <h2 class="abs zone-title" style="left:4020px; top:250px; font-size:48px;">CREATURE DESIGN</h2>
+    <h2 class="abs zone-title" style="left:1874px; top:810px; font-size:48px;">COMICS</h2>
     <p class="abs sublabel" style="left:1874px; top:868px; white-space:nowrap;">CETS BRING IT BACK</p>
     <p class="abs sublabel" style="left:1874px; top:1652px; white-space:nowrap;">MASTODON WANDERERS</p>
     <button class="abs stack" id="stack1" data-gallery="gallery-1of1" type="button" style="left:2334px; top:400px;" aria-label="Open the 23 one-of-one characters">
@@ -559,12 +558,12 @@ svg.draw path.guide { stroke: none; }
       <span class="stack-card" style="--i:0;"><img data-src="work/1of1/10-t.webp" alt="" draggable="false" decoding="async"></span>
     </button>
     <p class="abs sublabel" style="left:2324px; top:780px;">PROCESS</p>
-    <h2 class="abs zone-title mk mk-des" style="left:5260px; top:200px; font-size:48px;">LOGOS</h2>
-    <h2 class="abs zone-title mk mk-art" style="left:440px; top:2560px; font-size:48px;">MISC / MEMES</h2>
+    <h2 class="abs zone-title" style="left:5260px; top:200px; font-size:48px;">LOGOS</h2>
+    <h2 class="abs zone-title" style="left:440px; top:2560px; font-size:48px;">MISC / MEMES</h2>
     <div id="illo"></div>
 
     <!-- ALBUM ART: iPod classic with Cover Flow -->
-    <h2 class="abs zone-title mk mk-art" style="left:1878px; top:196px; font-size:48px;">ALBUM ART</h2>
+    <h2 class="abs zone-title" style="left:1878px; top:196px; font-size:48px;">ALBUM ART</h2>
     <div class="abs ipod" id="ipod" style="left:1900px; top:290px;" role="group" aria-label="Album art on an iPod">
       <div class="ipod-screen" tabindex="0" role="button" aria-label="Play album art: opens Cover Flow">
         <div class="ipod-bar"><span>Cover Flow</span><span class="ipod-batt" aria-hidden="true"></span></div>
@@ -610,9 +609,9 @@ svg.draw path.guide { stroke: none; }
       <span class="stack-card" style="--i:3;"><img data-src="work/logo-m0.webp" alt="" draggable="false" decoding="async"></span>
     </button>
 
-    <h2 class="abs zone-title mk mk-art" style="left:2320px; top:1830px; font-size:48px;">PORTRAITS</h2>
+    <h2 class="abs zone-title" style="left:2320px; top:1830px; font-size:48px;">PORTRAITS</h2>
 
-    <h2 class="abs zone-title mk mk-art" style="left:2320px; top:2540px; font-size:48px;">EMOTES &amp; STICKERS</h2>
+    <h2 class="abs zone-title" style="left:2320px; top:2540px; font-size:48px;">EMOTES &amp; STICKERS</h2>
 
     <!-- Other zones, empty until work lands -->
     <div id="zones"></div>
