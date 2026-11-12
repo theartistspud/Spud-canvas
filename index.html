@@ -149,18 +149,25 @@ svg.draw path.guide { stroke: none; }
 .uif img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: top; pointer-events: none; }
 .ui-visit { position: absolute; padding: 8px 14px; border: 1px solid var(--ink); border-radius: 999px; font: 700 13px/1 var(--mono); letter-spacing: .06em; color: var(--ink); text-decoration: none; white-space: nowrap; }
 .ui-visit:hover { background: var(--ink); color: var(--paper); }
+/* CETS Neue: custom typeface designed for the CETS brand */
+@font-face { font-family: "CETS Neue"; src: url("fonts/CETSNeue-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 /* Creative Direction: role card, stats, project headers */
 .cd-role { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
 .cd-kicker { font: 700 15px/1 var(--mono); letter-spacing: .16em; color: var(--red); }
-.cd-role h3 { margin: 10px 0 8px; font: 400 92px/0.95 var(--display); color: var(--ink); white-space: nowrap; }
+.cd-role h3 { margin: 10px 0 8px; font: 400 92px/0.95 "CETS Neue", var(--display); color: var(--ink); white-space: nowrap; }
 .cd-role p { margin: 0; font: 500 22px/1.3 var(--note); color: var(--muted); }
 .cd-stats { display: flex; gap: 56px; margin: 0; padding: 0; list-style: none; }
 .cd-stats li { display: flex; flex-direction: column; gap: 6px; }
-.cd-stats b { font: 400 78px/0.9 var(--display); color: var(--ink); white-space: nowrap; }
+.cd-stats b { font: 400 78px/0.9 "CETS Neue", var(--display); color: var(--ink); white-space: nowrap; }
 .cd-stats span { font: 700 14px/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-.proj-title { font-size: 60px; }
+.proj-title { font-family: "CETS Neue", var(--display); font-size: 60px; }
 .proj-desc { margin: 0; font: 500 19px/1.3 var(--note); color: var(--ink); white-space: nowrap; }
 .proj-role { margin: 0; font: 700 13px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
+.type-card { box-sizing: border-box; padding: 26px 28px; border-radius: 14px; background: #0C0C0D; color: #F2F2F2; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 10px 24px rgba(27,26,30,.22); }
+.type-card .tc-k { font: 700 13px/1 var(--mono); letter-spacing: .14em; color: #E2FF1E; }
+.type-card .tc-name { font: 400 84px/0.9 "CETS Neue", var(--display); }
+.type-card .tc-glyphs { font: 400 44px/1.15 "CETS Neue", var(--display); color: #F2F2F2; word-break: break-all; }
+.type-card .tc-note { margin-top: auto; font: 500 16px/1.35 var(--note); color: #A6A6AC; }
 /* CETS DRIP: drop wall on the canvas, CETS lime as the only accent */
 .drip { --lime: #E2FF1E; z-index: 1; }
 .drip-title { position: absolute; left: 20px; top: 14px; margin: 0; font-family: var(--display); font-weight: 400; font-size: 150px; line-height: 1; color: var(--ink); letter-spacing: .01em; }
@@ -441,6 +448,12 @@ svg.draw path.guide { stroke: none; }
       </ul>
     </div>
     <p class="abs sublabel" style="left:-4996px; top:462px;">HIGHLIGHTS</p>
+    <div class="abs type-card" style="left:-920px; top:500px; width:500px; height:560px;" aria-label="CETS Neue, a custom typeface designed for the CETS brand">
+      <span class="tc-k">CUSTOM TYPEFACE</span>
+      <span class="tc-name">CETS Neue</span>
+      <span class="tc-glyphs">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ<br>0123456789<br>+ - / ? : ; [ ]</span>
+      <span class="tc-note">Designed in-house for the CETS brand. Used across the site, merch and campaigns, and for the titles in this section.</span>
+    </div>
     <h2 class="abs zone-title proj-title" style="left:-5000px; top:1100px;">WEBSITE · CETS.WTF</h2>
     <p class="abs proj-desc" style="left:-4998px; top:1166px;">Designed and directed the brand’s home on the internet, from landing hero and navigation to every page and mobile layout.</p>
     <p class="abs proj-role" style="left:-4998px; top:1198px;">Art direction · UX/UI · Illustration</p>
