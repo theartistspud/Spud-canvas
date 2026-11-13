@@ -1,22 +1,54 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="description" content="Illustration, character design, game art and creative direction. Drag around, zoom in.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://spud-portfolio.vercel.app/">
-<meta property="og:title" content="Spud's Portfolio"><meta property="og:description" content="Illustration, character design, game art and creative direction. Drag around, zoom in.">
-<meta property="og:image" content="https://spud-portfolio.vercel.app/og-portfolio.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Spud's Portfolio: illustration, character design, game art and creative direction">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Spud's Portfolio"><meta name="twitter:description" content="Illustration, character design, game art and creative direction. Drag around, zoom in."><meta name="twitter:image" content="https://spud-portfolio.vercel.app/og-portfolio.jpg">
-</head><body>
-<title>Spud's Canvas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spud's Portfolio · Illustrator &amp; Creative Director</title>
+<meta name="description" content="Spud is an illustrator and creative director: characters, creatures, game art, album covers and brand campaigns. Drag around the canvas and zoom in.">
+<link rel="canonical" href="https://spud-portfolio.vercel.app/">
+<meta name="theme-color" content="#F3F3F1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spud's Portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://spud-portfolio.vercel.app/">
+<meta property="og:title" content="Spud's Portfolio">
+<meta property="og:description" content="Illustration, character design, game art and creative direction. Drag around, zoom in.">
+<meta property="og:image" content="https://spud-portfolio.vercel.app/og-portfolio.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Spud's Portfolio: illustration, character design, game art and creative direction">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@theartistspud">
+<meta name="twitter:creator" content="@theartistspud">
+<meta name="twitter:title" content="Spud's Portfolio">
+<meta name="twitter:description" content="Illustration, character design, game art and creative direction. Drag around, zoom in.">
+<meta name="twitter:image" content="https://spud-portfolio.vercel.app/og-portfolio.jpg">
+<meta name="twitter:image:alt" content="Spud's Portfolio: illustration, character design, game art and creative direction">
+<link rel="preload" href="fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Spud", "alternateName": "The Artist Spud", "jobTitle": "Illustrator and Creative Director", "url": "https://spud-portfolio.vercel.app/", "image": "https://spud-portfolio.vercel.app/og-portfolio.jpg", "sameAs": ["https://www.instagram.com/theartistspud", "https://x.com/theartistspud"]}</script>
 <style>
-/* Layout: an infinite dotted canvas (FigJam-like) you drag and zoom; START HERE hub at origin, zones scattered around it. Single light look by choice. */
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+@font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Caveat";src:url("fonts/caveat-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Caveat";src:url("fonts/caveat-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("fonts/dm-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("fonts/dm-sans-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("fonts/dm-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("fonts/dm-sans-latin-800-normal.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
 :root {
   color-scheme: light;
   --paper: #F3F3F1;
   --dot: #C4C5C9;
   --ink: #1B1A1E;
   --muted: #5F5D66;
-  --chip: #E9547E;
   --red: #E1251B;
   --panel: #FFFFFF;
   --line: #DADAD7;
@@ -44,7 +76,6 @@ body { background: var(--paper); color: var(--ink); overflow: hidden; font-famil
 .board.fade { opacity: 0; }
 .abs { position: absolute; }
 
-/* Hub */
 .start {
   font-family: var(--display); font-size: 150px; line-height: .85; letter-spacing: .01em;
   white-space: nowrap; transform: translate(-50%, -50%); left: 0; top: -62px; margin: 0; font-weight: 400;
@@ -58,7 +89,6 @@ svg.draw path.guide { stroke: none; }
 .curve-note { font-family: var(--note); font-size: 20px; font-weight: 700; fill: var(--ink); stroke: var(--paper); stroke-width: 5px; paint-order: stroke; stroke-linejoin: round; }
 .curve-note.hot { fill: var(--red); letter-spacing: .03em; font-size: 24px; font-weight: 800; }
 
-/* About */
 .zone-title { font-family: var(--display); font-size: 58px; line-height: 1; margin: 0; font-weight: 400; white-space: nowrap; }
 .sublabel { margin: 0; font-family: var(--mono); font-size: 18px; font-weight: 700; letter-spacing: .14em; color: var(--ink); -webkit-text-stroke: .4px currentColor; }
 .hello { font-family: var(--mono); font-size: 17px; font-weight: 700; line-height: 1.45; margin: 0; white-space: nowrap; }
@@ -66,22 +96,9 @@ svg.draw path.guide { stroke: none; }
   display: block; width: 680px; padding: 0; border: 0; background: none; cursor: zoom-in;
 }
 .resume img { display: block; width: 680px; max-width: none; height: auto; }
-.resume:focus-visible, .ctl:focus-visible, .zone:focus-visible { outline: 3px solid var(--chip); outline-offset: 4px; }
+.resume:focus-visible, .ctl:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
 .tap { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 10px 0 0; }
 
-/* Work zones (empty for now) */
-.zone {
-  width: 560px; height: 380px; border: 2px dashed var(--line); border-radius: 6px;
-  display: flex; flex-direction: column; justify-content: space-between; padding: 26px 28px;
-}
-.zone h2 { font-family: var(--display); font-size: 52px; line-height: .95; margin: 0; font-weight: 400; text-wrap: balance; }
-.zone p { margin: 0; font-family: var(--mono); font-size: 13px; color: var(--muted); max-width: 40ch; }
-.chip {
-  align-self: flex-start; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--chip); border: 1.5px solid var(--chip); border-radius: 99px; padding: 3px 10px;
-}
-
-/* Controls */
 .controls {
   position: fixed; z-index: 5; display: flex; gap: 2px; align-items: center;
   right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
@@ -94,10 +111,6 @@ svg.draw path.guide { stroke: none; }
 }
 .ctl:hover { background: var(--paper); }
 #zoomLabel { font-family: var(--mono); font-size: 12px; min-width: 54px; font-variant-numeric: tabular-nums; }
-.hint-unused {
-  position: fixed; z-index: 5; left: calc(16px + env(safe-area-inset-left, 0px)); bottom: calc(22px + env(safe-area-inset-bottom, 0px));
-  font-family: var(--mono); font-size: 12px; color: var(--muted); pointer-events: none;
-}
 .brand {
   position: fixed; z-index: 5; left: calc(16px + env(safe-area-inset-left, 0px)); top: calc(16px + env(safe-area-inset-top, 0px));
   font-family: var(--display); font-size: 26px; letter-spacing: .02em; background: var(--panel);
@@ -109,7 +122,7 @@ svg.draw path.guide { stroke: none; }
 .art img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; pointer-events: none; }
 .art:hover { transform: rotate(var(--r)) scale(1.03); box-shadow: 0 12px 30px rgba(27,26,30,.22); z-index: 2; }
 .art.cutout { background: none; box-shadow: none; filter: drop-shadow(0 6px 12px rgba(27,26,30,.2)); }
-.art:focus-visible { outline: 3px solid var(--chip); outline-offset: 4px; }
+.art:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .art { transition: none; } }
 .sticky { width: 246px; min-height: 246px; box-sizing: border-box; padding: 22px 18px 14px; font-family: var(--hand); color: var(--ink); line-height: 1.12;
   box-shadow: 2px 10px 18px rgba(27,26,30,.22), inset 0 -10px 18px rgba(0,0,0,.04); transform: rotate(var(--r)); cursor: default; }
@@ -128,7 +141,6 @@ svg.draw path.guide { stroke: none; }
 .sticky .copy:hover { background: rgba(255,255,255,.5); }
 .sticky a:focus-visible, .sticky .copy:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 .sticky .scribble { color: var(--red); }
-/* Cet Runner (game art) */
 .dino-px { max-width: none; pointer-events: none; filter: drop-shadow(0 2px 0 rgba(27,26,30,.35)) drop-shadow(0 4px 8px rgba(27,26,30,.2)); }
 .dino-scene { pointer-events: none; border-radius: 12px; object-fit: cover; box-shadow: 0 8px 20px rgba(27,26,30,.18); }
 .sprite { pointer-events: none; background-repeat: no-repeat; background-size: auto 100%; animation: sprite var(--d) steps(var(--n), jump-none) infinite; }
@@ -144,7 +156,6 @@ svg.draw path.guide { stroke: none; }
 .vid-play:hover span { transform: scale(1.08); }
 .vid-play:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
 @media (prefers-reduced-motion: reduce) { .sprite, .sprite.hop { animation: none; } }
-/* Website / UI board: frames like a design file */
 .uiboard { z-index: 1; }
 .uif { position: absolute; margin: 0; }
 .uif figcaption { margin: 0 0 6px; font: 12px/1.2 var(--mono); color: var(--muted); white-space: nowrap; }
@@ -154,9 +165,7 @@ svg.draw path.guide { stroke: none; }
 .uif img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: top; pointer-events: none; }
 .ui-visit { position: absolute; padding: 8px 14px; border: 1px solid var(--ink); border-radius: 999px; font: 700 13px/1 var(--mono); letter-spacing: .06em; color: var(--ink); text-decoration: none; white-space: nowrap; }
 .ui-visit:hover { background: var(--ink); color: var(--paper); }
-/* CETS Neue: custom typeface designed for the CETS brand */
-@font-face { font-family: "CETS Neue"; src: url("fonts/CETSNeue-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-/* Creative Direction: role card, stats, project headers */
+@font-face { font-family: "CETS Neue"; src: url("fonts/cets-neue-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 .cd-role { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
 .cd-kicker { font: 700 15px/1 var(--mono); letter-spacing: .16em; color: var(--red); }
 .cd-role h3 { margin: 10px 0 8px; font: 400 92px/0.95 "CETS Neue", var(--display); color: var(--ink); white-space: nowrap; }
@@ -173,11 +182,9 @@ svg.draw path.guide { stroke: none; }
 .type-card .tc-name { font: 400 84px/0.9 "CETS Neue", var(--display); }
 .type-card .tc-glyphs { font: 400 44px/1.15 "CETS Neue", var(--display); color: #F2F2F2; word-break: break-all; }
 .type-card .tc-note { margin-top: auto; font: 500 16px/1.35 var(--note); color: #A6A6AC; }
-/* CETS project highlighter: one marker colour per project (web lime, campaign pink, brand world cyan, merch orange) */
 .mk-web { --hlc: #E2FF1E; } .mk-camp { --hlc: #FF8AC4; } .mk-world { --hlc: #7DF3FF; } .mk-merch { --hlc: #FFB547; }
 .mk { padding: 0 10px; margin-left: -10px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
   background: linear-gradient(transparent 50%, var(--hlc) 50%, var(--hlc) 90%, transparent 90%); }
-/* CETS DRIP: drop wall on the canvas, CETS lime as the only accent */
 .drip { --lime: #FFB547; z-index: 1; }
 .drip-title { position: absolute; left: 20px; top: 14px; margin: 0; font-family: var(--display); font-weight: 400; font-size: 150px; line-height: 1; color: var(--ink); letter-spacing: .01em; }
 .drip-title span, .drop-name, .hl { background: linear-gradient(transparent 52%, var(--lime) 52%, var(--lime) 88%, transparent 88%); }
@@ -196,7 +203,6 @@ svg.draw path.guide { stroke: none; }
 .phone.land .vid-wrap { inset: 10px 14px; border-radius: 16px; }
 .phone .vid-play span { background: var(--lime); box-shadow: 0 0 24px rgba(226,255,30,.5); width: 56px; height: 56px; font-size: 20px; }
 @media (prefers-reduced-motion: reduce) { .tb { transition: none; } }
-/* iPod classic, silver */
 .ipod { transform-origin: 0 0; width: 340px; height: 566px; border-radius: 34px; padding: 22px 22px 0; box-sizing: border-box;
   background: linear-gradient(160deg, #F4F4F6 0%, #DADADF 45%, #C7C7CD 100%);
   box-shadow: inset 0 2px 1px rgba(255,255,255,.9), inset 0 -3px 6px rgba(0,0,0,.12), 0 18px 34px rgba(27,26,30,.28); transform: rotate(-2deg) scale(.8); }
@@ -294,7 +300,7 @@ svg.draw path.guide { stroke: none; }
 .stack.sm .stack-card img { object-fit: contain; }
 .stack.sm:hover, .stack.sm:focus-visible { z-index: 3; }
 .close-gallery { position: fixed; z-index: 16; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px));
-  font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 10px rgba(27,26,30,.08); }
 @media (prefers-reduced-motion: reduce) { .stack-card, .g-grid button { transition: none; } }
 .sticky.blue { background: var(--note-blue); }
 .how { left: -123px; top: 118px; display: flex; flex-direction: column; justify-content: center; text-align: center; }
@@ -308,7 +314,6 @@ svg.draw path.guide { stroke: none; }
 .sticky .dwight { margin: 4px 0 0; font-size: 15.5px; font-weight: 600; line-height: 1.12; }
 .sticky .dwight .inner-cite { font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; }
 .sticky .outer-cite { margin: 2px 6px 0 0; text-align: right; font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; line-height: 1; }
-/* Phones & tablets */
 #viewport { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
 @media (pointer: coarse) { .ctl { height: 44px; min-width: 44px; } }
 @media (max-width: 640px) {
@@ -320,7 +325,6 @@ svg.draw path.guide { stroke: none; }
   .g-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
   .g-grid.logos { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 }
-/* Lightbox */
 #lightbox {
   position: fixed; inset: 0; z-index: 20; background: rgba(27,26,30,.82); overflow: auto;
   padding: calc(56px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 32px max(16px, env(safe-area-inset-left, 0px));
@@ -336,21 +340,33 @@ svg.draw path.guide { stroke: none; }
 #lightbox { touch-action: pan-y pinch-zoom; }
 #closeBox {
   position: fixed; z-index: 21; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px));
-  font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer;
+  font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 10px rgba(27,26,30,.08);
 }
-@media (max-width: 520px) { .hint-unused { display: none; } }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
+.nojs { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--paper); color: var(--ink); }
+.nojs b { font: 400 64px/1 var(--display); }
+.nojs p { margin: 0; max-width: 36ch; font: 500 17px/1.45 var(--note); }
+.art img.failed, .tb img.failed, .uif img.failed { visibility: hidden; }
+.art:has(img.failed), .tb:has(img.failed) { background: var(--line); }
+#lightImg { transition: opacity .2s ease; }
+#lightImg.failed { display: none; }
+#lightbox.loading #lightImg { opacity: .25; }
+#lightbox.loading::after { content: ""; position: fixed; left: 50%; top: 50%; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; border: 3px solid rgba(255,255,255,.25); border-top-color: #FFFFFF; animation: spin .8s linear infinite; }
+.lb-msg { margin: 30vh auto 0; max-width: 40ch; text-align: center; font: 500 15px/1.4 var(--note); color: #FFFFFF; }
+@media (prefers-reduced-motion: reduce) { #lightbox.loading::after { animation: none; } }
 </style>
-
-<div class="brand" aria-hidden="true">SPUD*</div>
+</head>
+<body>
+<noscript><div class="nojs"><b>SPUD*</b><p>This portfolio is an interactive canvas and needs JavaScript. Turn it on, or reach me at theartistspud@gmail.com.</p></div></noscript>
+<h1 class="brand"><span aria-hidden="true">SPUD*</span><span class="sr-only">Spud: illustrator and creative director</span></h1>
 
 <div id="viewport" aria-label="Portfolio canvas. Drag to move, scroll or pinch to zoom.">
   <div id="world" class="board">
 
-    <!-- HUB: wide banner with the title sitting on its bottom edge -->
     <video class="abs header-loop" style="left:-440px; top:-360px;" src="header.mp4" autoplay muted loop playsinline preload="auto" aria-label="Animated illustration: a DJ deck with a spinning record"></video>
-    <h1 class="abs start">START HERE</h1>
+    <p class="abs start" aria-hidden="true">START HERE</p>
 
-    <!-- How to use: hand-written, between the arrows -->
     <div class="abs sticky blue how" style="--r:-2deg;" aria-label="How to use this page">
       <p class="how-title">how this works:</p>
       <p>drag to wander around</p>
@@ -359,7 +375,6 @@ svg.draw path.guide { stroke: none; }
       <p class="how-lost">lost? hit <b>Start here</b> ↘</p>
     </div>
 
-    <!-- left arrow -->
     <svg class="abs draw" style="left:-320px; top:-10px;" width="240" height="230" viewBox="0 0 240 230">
       <path d="M208 8 C 212 110, 150 182, 32 200" stroke-width="13"/>
       <path d="M64 166 L 30 200 L 72 222" stroke-width="13"/>
@@ -369,7 +384,6 @@ svg.draw path.guide { stroke: none; }
       <text class="curve-note"><textPath href="#curveL2" startOffset="50%" text-anchor="middle">gimme your resume</textPath></text>
     </svg>
 
-    <!-- right arrow -->
     <svg class="abs draw" style="left:100px; top:-10px;" width="240" height="230" viewBox="0 0 240 230">
       <path d="M32 8 C 28 110, 90 182, 208 200" stroke-width="13"/>
       <path d="M176 166 L 210 200 L 168 222" stroke-width="13"/>
@@ -379,7 +393,6 @@ svg.draw path.guide { stroke: none; }
       <text class="curve-note hot"><textPath href="#curveR2" startOffset="50%" text-anchor="middle">GOOD STUFF</textPath></text>
     </svg>
 
-    <!-- ABOUT ME -->
     <div class="abs" style="left:-1020px; top:120px; width:680px;">
       <h2 class="zone-title" style="text-align:center;">ABOUT ME</h2>
       <p class="hello" style="margin:16px 0 14px 14px;">hEllo!<br>I'm Ashilesh aka SPUD!</p>
@@ -389,7 +402,6 @@ svg.draw path.guide { stroke: none; }
       <p class="tap">tap to read it properly →</p>
     </div>
 
-    <!-- Sticky notes over the resume -->
     <div class="abs sticky yellow" style="left:-590px; top:950px; --r:-4deg;" aria-label="Contact and socials">
       <h3>hit me up ✎</h3>
       <ul>
@@ -408,7 +420,6 @@ svg.draw path.guide { stroke: none; }
       <img src="dwight.webp" width="230" height="153" alt="Dwight Schrute staring at the camera" draggable="false">
     </figure>
 
-    <!-- CATEGORY CLUSTERS: what the right arrow points at -->
     <button class="abs cluster pile" type="button" data-cat="artsy" style="left:330px; top:190px; width:310px; height:270px;" aria-label="Open Artsy: illustration, characters, portraits, emotes">
       <span class="cluster-title" style="top:-22px;">ARTSY</span>
       <span class="pc" style="left:6px; top:40px; width:150px; height:150px; --r:-9deg; --dx:-14px; --dy:6px;"><img src="work/charillo-3-t.webp" alt="" draggable="false"></span>
@@ -437,17 +448,13 @@ svg.draw path.guide { stroke: none; }
 
   </div>
 
-  <!-- WORK CANVAS: its own infinite board, categories side by side -->
   <div id="work" class="board" hidden>
-    <!-- CATEGORY AREAS, side by side: Artsy then Design -->
     <section class="abs part" style="left:-5070px; top:130px; width:4680px; height:4990px;" aria-label="Creative Direction"><h2 class="part-title">CREATIVE DIRECTION</h2></section>
     <section class="abs part" style="left:380px; top:130px; width:4410px; height:3740px;" aria-label="Artsy"><h2 class="part-title">ARTSY</h2></section>
     <section class="abs part" style="left:5180px; top:130px; width:2640px; height:3240px;" aria-label="Design"><h2 class="part-title">DESIGN</h2></section>
-    <h2 class="abs zone-title" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h2>
-    <h2 class="abs zone-title" style="left:6520px; top:200px; font-size:48px;">GAME ART</h2>
+    <h3 class="abs zone-title" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h3>
+    <h3 class="abs zone-title" style="left:6520px; top:200px; font-size:48px;">GAME ART</h3>
     <p class="abs sublabel" style="left:6524px; top:296px; white-space:nowrap;">SKILL ICONS</p>
-    <!-- CETS DRIP: drop wall. Giant drop names, photos pinned over them, hand-written notes, CETS lime as the accent -->
-    <!-- CREATIVE DIRECTION: CETS -->
     <div class="abs cd-role" style="left:-5000px; top:240px; width:4560px;">
       <div><span class="cd-kicker">ROLE</span><h3>Creative Director · CETS</h3><p>Brand, web, merch, campaigns and IP, end to end.</p></div>
       <ul class="cd-stats">
@@ -463,27 +470,27 @@ svg.draw path.guide { stroke: none; }
       <span class="tc-glyphs">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ<br>0123456789<br>+ - / ? : ; [ ]</span>
       <span class="tc-note">Designed in-house for the CETS brand. Used across the site, merch and campaigns, and for the titles in this section.</span>
     </div>
-    <h2 class="abs zone-title proj-title mk mk-web" style="left:-5000px; top:1100px;">WEBSITE · CETS.WTF</h2>
+    <h3 class="abs zone-title proj-title mk mk-web" style="left:-5000px; top:1100px;">WEBSITE · CETS.WTF</h3>
     <p class="abs proj-desc" style="left:-4998px; top:1166px;">Designed and directed the brand’s home on the internet, from landing hero and navigation to every page and mobile layout.</p>
     <p class="abs proj-role" style="left:-4998px; top:1198px;">Art direction · UX/UI · Illustration</p>
     <a class="abs ui-visit" href="https://cets.wtf/" target="_blank" rel="noopener" style="left:-4380px; top:1110px;">visit cets.wtf ↗</a>
     <p class="abs sublabel" style="left:-2586px; top:1200px;">PAGES</p>
-    <h2 class="abs zone-title proj-title mk mk-web" style="left:-2590px; top:1770px;">ROADMAP: WHAT’S NEXT</h2>
+    <h3 class="abs zone-title proj-title mk mk-web" style="left:-2590px; top:1770px;">ROADMAP: WHAT’S NEXT</h3>
     <p class="abs proj-desc" style="left:-2588px; top:1836px;">A living roadmap system that turned upcoming drops and events into collectible cards.</p>
     <p class="abs proj-role" style="left:-2588px; top:1868px;">UX/UI · System design</p>
     <p class="abs sublabel" style="left:-1656px; top:1882px;">CETS DRIP · DROP PAGE</p>
-    <h2 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:2622px;">CAMPAIGN: FOMO × CETS</h2>
+    <h3 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:2622px;">CAMPAIGN: FOMO × CETS</h3>
     <p class="abs proj-desc" style="left:-4998px; top:2688px;">A launch campaign built on the brand line “the lifestyle for the real and unapologetic.”</p>
     <p class="abs proj-role" style="left:-4998px; top:2720px;">Concept · Art direction · Design</p>
-    <h2 class="abs zone-title proj-title mk mk-world" style="left:-3730px; top:2622px;">BRAND WORLD &amp; IP</h2>
+    <h3 class="abs zone-title proj-title mk mk-world" style="left:-3730px; top:2622px;">BRAND WORLD &amp; IP</h3>
     <p class="abs proj-desc" style="left:-3728px; top:2688px;">Built the Cetsworld universe: story, characters, Ceticatures and the four pillars the brand stands on.</p>
     <p class="abs proj-role" style="left:-3728px; top:2720px;">Worldbuilding · Illustration · Content</p>
-    <h2 class="abs zone-title proj-title mk mk-merch" style="left:-5000px; top:3540px;">MERCH DROPS</h2>
+    <h3 class="abs zone-title proj-title mk mk-merch" style="left:-5000px; top:3540px;">MERCH DROPS</h3>
     <p class="abs proj-desc" style="left:-4998px; top:3606px;">Five drops from concept to unboxing: apparel, packaging, eyewear and lookbooks.</p>
     <p class="abs proj-role" style="left:-4998px; top:3638px;">Product design · Packaging · Art direction</p>
     <p class="abs sublabel" style="left:-2366px; top:3760px;">MOCKUPS</p>
     <section class="abs drip" style="left:-5040px; top:3680px; width:2570px; height:1080px;" aria-label="CETS merch drops">
-      <h3 class="drip-title"><span>CETS DRIP</span></h3>
+      <h4 class="drip-title"><span>CETS DRIP</span></h4>
       <span class="drop-name" style="left:20px; top:176px; --r:-2deg; font-size:110px;">313</span>
       <button class="tb print" type="button" data-full="work/drip/hoodie-p.webp" aria-label="Open: 313 hoodie with built-in mask" style="left:30px; top:250px; width:180px; height:360px; --r:-5deg;"><img data-src="work/drip/hoodie-p-dt.webp" alt="313 hoodie with built-in mask" draggable="false" decoding="async"></button>
       <button class="tb print" type="button" data-full="work/drip/look-0.webp" aria-label="Open: 313 hoodie neon lookbook shot 1" style="left:236px; top:262px; width:110px; height:268px; --r:-8deg;"><img data-src="work/drip/look-0-dt.webp" alt="313 hoodie neon lookbook shot 1" draggable="false" decoding="async"></button>
@@ -526,7 +533,6 @@ svg.draw path.guide { stroke: none; }
       <svg class="doodle" style="left:1150px; top:470px; width:90px; height:60px;" viewBox="0 0 90 60" aria-hidden="true"><path d="M6 50 C 30 10, 60 6, 82 20 M72 10 L84 20 L70 28"/></svg>
       <svg class="doodle" style="left:2120px; top:416px; width:46px; height:46px;" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 4 L34 24 L54 28 L34 33 L30 56 L26 33 L6 28 L26 24 Z"/></svg>
     </section>
-    <!-- GAME ART: Cet Runner, a game Spud made -->
     <p class="abs sublabel" style="left:6524px; top:886px; white-space:nowrap;">CET RUNNER</p>
     <div class="abs vid-wrap" style="left:6520px; top:930px; width:1000px; height:294px;">
       <video id="cetVid" src="work/dino/cet-runner.mp4" poster="work/dino/poster.jpg" preload="none" playsinline aria-label="Gameplay of Cet Runner, a pixel-art endless runner Spud made"></video>
@@ -544,15 +550,14 @@ svg.draw path.guide { stroke: none; }
     <img class="abs dino-px" data-src="work/dino/life.webp" alt="" draggable="false" decoding="async" style="left:7316px; top:1354px; width:118px; height:112px;">
     <img class="abs dino-px" data-src="work/dino/cross.webp" alt="" draggable="false" decoding="async" style="left:7454px; top:1362px; width:92px; height:96px;">
     <img class="abs dino-px" data-src="work/dino/dead.webp" alt="" draggable="false" decoding="async" style="left:7566px; top:1350px; width:113px; height:120px;">
-    <h2 class="abs zone-title" style="left:5240px; top:2100px; font-size:48px;">CARD GAME DESIGN</h2>
+    <h3 class="abs zone-title" style="left:5240px; top:2100px; font-size:48px;">CARD GAME DESIGN</h3>
 
-    <!-- ILLUSTRATION: loose pinned pieces -->
-    <h2 class="abs zone-title" style="left:432px; top:196px; font-size:48px;">ILLUSTRATION</h2>
+    <h3 class="abs zone-title" style="left:432px; top:196px; font-size:48px;">ILLUSTRATION</h3>
     <p class="abs sublabel" style="left:436px; top:262px;">ILLUSTRATIONS</p>
     <p class="abs sublabel" style="left:436px; top:1430px;">CHARACTER ILLUSTRATIONS</p>
-    <h2 class="abs zone-title" style="left:2320px; top:250px; font-size:48px;">CHARACTER DESIGN</h2>
-    <h2 class="abs zone-title" style="left:4020px; top:250px; font-size:48px;">CREATURE DESIGN</h2>
-    <h2 class="abs zone-title" style="left:1874px; top:810px; font-size:48px;">COMICS</h2>
+    <h3 class="abs zone-title" style="left:2320px; top:250px; font-size:48px;">CHARACTER DESIGN</h3>
+    <h3 class="abs zone-title" style="left:4020px; top:250px; font-size:48px;">CREATURE DESIGN</h3>
+    <h3 class="abs zone-title" style="left:1874px; top:810px; font-size:48px;">COMICS</h3>
     <p class="abs sublabel" style="left:1874px; top:868px; white-space:nowrap;">CETS BRING IT BACK</p>
     <p class="abs sublabel" style="left:1874px; top:1652px; white-space:nowrap;">MASTODON WANDERERS</p>
     <button class="abs stack" id="stack1" data-gallery="gallery-1of1" type="button" style="left:2334px; top:400px;" aria-label="Open the 23 one-of-one characters">
@@ -563,12 +568,11 @@ svg.draw path.guide { stroke: none; }
       <span class="stack-card" style="--i:0;"><img data-src="work/1of1/10-t.webp" alt="" draggable="false" decoding="async"></span>
     </button>
     <p class="abs sublabel" style="left:2324px; top:780px;">PROCESS</p>
-    <h2 class="abs zone-title" style="left:5260px; top:200px; font-size:48px;">LOGOS</h2>
-    <h2 class="abs zone-title" style="left:440px; top:2560px; font-size:48px;">MISC / MEMES</h2>
+    <h3 class="abs zone-title" style="left:5260px; top:200px; font-size:48px;">LOGOS</h3>
+    <h3 class="abs zone-title" style="left:440px; top:2560px; font-size:48px;">MISC / MEMES</h3>
     <div id="illo"></div>
 
-    <!-- ALBUM ART: iPod classic with Cover Flow -->
-    <h2 class="abs zone-title" style="left:1878px; top:196px; font-size:48px;">ALBUM ART</h2>
+    <h3 class="abs zone-title" style="left:1878px; top:196px; font-size:48px;">ALBUM ART</h3>
     <div class="abs ipod" id="ipod" style="left:1900px; top:290px;" role="group" aria-label="Album art on an iPod">
       <div class="ipod-screen" tabindex="0" role="button" aria-label="Play album art: opens Cover Flow">
         <div class="ipod-bar"><span>Cover Flow</span><span class="ipod-batt" aria-hidden="true"></span></div>
@@ -614,12 +618,10 @@ svg.draw path.guide { stroke: none; }
       <span class="stack-card" style="--i:3;"><img data-src="work/logo-m0.webp" alt="" draggable="false" decoding="async"></span>
     </button>
 
-    <h2 class="abs zone-title" style="left:2320px; top:1830px; font-size:48px;">PORTRAITS</h2>
+    <h3 class="abs zone-title" style="left:2320px; top:1830px; font-size:48px;">PORTRAITS</h3>
 
-    <h2 class="abs zone-title" style="left:2320px; top:2540px; font-size:48px;">EMOTES &amp; STICKERS</h2>
+    <h3 class="abs zone-title" style="left:2320px; top:2540px; font-size:48px;">EMOTES &amp; STICKERS</h3>
 
-    <!-- Other zones, empty until work lands -->
-    <div id="zones"></div>
   </div>
 </div>
 
@@ -714,22 +716,18 @@ svg.draw path.guide { stroke: none; }
   </div>
 </div>
 
-<div id="lightbox" hidden>
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Artwork viewer">
   <button id="closeBox" type="button">Close</button>
   <button class="lb-nav" id="lbPrev" type="button" aria-label="Previous artwork" hidden>&#8249;</button>
   <button class="lb-nav" id="lbNext" type="button" aria-label="Next artwork" hidden>&#8250;</button>
-  <img id="lightImg" alt="Spud's resume, full size">
+  <img id="lightImg" alt="">
+  <p class="lb-msg" id="lbMsg" hidden>This one didn't load. Check your connection and try again.</p>
 </div>
 
 <script>
 (() => {
-  // Zones on the "good stuff" side. Content arrives piece by piece.
-  const ZONES = [
-,
-  ];
  const ART = [{"s": "work/creature-0", "x": 4030, "y": 350, "w": 310, "h": 310, "r": -1.5, "a": false, "alt": "Horned beast in a bloody skull mask crackling with lightning"}, {"s": "work/creature-1", "x": 4370, "y": 362, "w": 310, "h": 310, "r": 2, "a": false, "alt": "Red dragon with burning eyes and golden fire rings"}, {"s": "work/creature-2", "x": 4040, "y": 690, "w": 310, "h": 310, "r": 1.2, "a": false, "alt": "Two-headed shadow dragon bursting with red crystals"}, {"s": "work/creature-3", "x": 4380, "y": 700, "w": 310, "h": 310, "r": -2, "a": false, "alt": "Straw-maned scarecrow beast clutching a jack-o'-lantern"}, {"s": "work/creature-4", "x": 4030, "y": 1066, "w": 310, "h": 248, "r": 1.4, "a": false, "alt": "Stone golem creature with a long red tongue and tribal markings"}, {"s": "work/creature-5", "x": 4380, "y": 1030, "w": 310, "h": 310, "r": -1.6, "a": false, "alt": "Feathered red hound prowling before a blood moon"}, {"s": "work/creature-6", "x": 4040, "y": 1375, "w": 310, "h": 310, "r": -0.8, "a": false, "alt": "Mothman with glowing red eye and torn wings"}, {"s": "work/creature-7", "x": 4375, "y": 1370, "w": 310, "h": 310, "r": 1.8, "a": false, "alt": "Giant snarling rat with a bandaged, nail-pierced tail"}, {"s": "work/creature-8", "x": 4205, "y": 1712, "w": 310, "h": 310, "r": -1.2, "a": false, "alt": "Giant rat clutching a bloody scythe"}, {"s": "illo/cets-on-crack", "x": 430, "y": 324, "w": 420, "h": 220, "r": -1.5, "a": false, "alt": "Isometric street scene for Cets on Crack"}, {"s": "illo/boat", "x": 874, "y": 300, "w": 264, "h": 264, "r": 2.5, "a": false, "alt": "Cat crew sailing a small boat with shark fins around it"}, {"s": "illo/heroes", "x": 1156, "y": 336, "w": 384, "h": 141, "r": -2, "a": false, "alt": "Four fantasy heroes charging into light"}, {"s": "illo/glitch-cets", "x": 1564, "y": 300, "w": 180, "h": 320, "r": 3, "a": false, "alt": "Glitched collage of cat character faces"}, {"s": "illo/cet-elections", "x": 442, "y": 576, "w": 336, "h": 189, "r": 2, "a": false, "alt": "Isometric CET elections rally"}, {"s": "illo/mushroom-man", "x": 796, "y": 594, "w": 312, "h": 218, "r": -2.5, "a": true, "alt": "Bearded man surrounded by mushrooms"}, {"s": "illo/24", "x": 1132, "y": 510, "w": 312, "h": 175, "r": 1.5, "a": false, "alt": "Self-portrait birthday piece holding a 24"}, {"s": "illo/pumpkin", "x": 1156, "y": 714, "w": 300, "h": 169, "r": -1, "a": false, "alt": "Halloween pumpkin monster battling ghouls"}, {"s": "illo/podcast", "x": 424, "y": 798, "w": 324, "h": 182, "r": -2, "a": false, "alt": "Two guys talking in a plant-filled studio"}, {"s": "illo/mushroom-gallery", "x": 772, "y": 834, "w": 216, "h": 310, "r": 2, "a": false, "alt": "Figure looking at a wall of mushroom paintings"}, {"s": "illo/cets-room", "x": 1006, "y": 900, "w": 252, "h": 252, "r": -1.5, "a": false, "alt": "Cat gang lounging in a messy living room"}, {"s": "illo/paris", "x": 1504, "y": 660, "w": 288, "h": 209, "r": 2.5, "a": false, "alt": "Animal crew resting by a car in ruined Paris"}, {"s": "illo/monkey-af", "x": 1300, "y": 924, "w": 300, "h": 169, "r": -1.5, "a": false, "alt": "Two monkey characters with katanas"}, {"s": "illo/cets-spaces", "x": 460, "y": 1014, "w": 312, "h": 175, "r": 1, "a": false, "alt": "Cets Spaces podcast set, season 2"}, {"s": "illo/potato-fight", "x": 772, "y": 1176, "w": 312, "h": 175, "r": -2, "a": false, "alt": "Potato characters in an anime-style showdown"}, {"s": "illo/devils-subway", "x": 1300, "y": 1128, "w": 276, "h": 155, "r": 2, "a": false, "alt": "DeEvils merch on a hellish subway train"}, {"s": "work/char-29", "x": 2320, "y": 830, "w": 357, "h": 252, "r": 1.2, "a": false, "alt": "Character exploration sheet: Moonies Brainstorm"}, {"s": "work/char-45", "x": 2720, "y": 845, "w": 400, "h": 225, "r": -1.8, "a": false, "alt": "Character exploration sheet: Honey Badgers"}, {"s": "work/char-47", "x": 2330, "y": 1130, "w": 300, "h": 300, "r": -1, "a": false, "alt": "Character exploration sheet: 8tXl3m_Illustration"}, {"s": "work/char-3", "x": 3160, "y": 838, "w": 400, "h": 225, "r": 2, "a": false, "alt": "Character exploration sheet: Character illustrations for Rejects-with BG"}, {"s": "work/char-35", "x": 2670, "y": 1150, "w": 1086, "h": 249, "r": 1, "a": false, "alt": "Character exploration sheet: Gorrilaz Pitch 1"}, {"s": "work/char-43", "x": 2340, "y": 1470, "w": 1086, "h": 249, "r": -0.8, "a": false, "alt": "Character exploration sheet: Gorrilaz Pitch"}, {"s": "work/misc-16", "x": 447, "y": 2622, "w": 210, "h": 210, "r": -2.0, "a": false, "alt": "Meme"}, {"s": "work/misc-50", "x": 682, "y": 2637, "w": 210, "h": 210, "r": -1.3, "a": false, "alt": "Meme"}, {"s": "work/misc-14", "x": 912, "y": 2633, "w": 210, "h": 210, "r": 2.2, "a": false, "alt": "Meme"}, {"s": "work/misc-8", "x": 1154, "y": 2633, "w": 210, "h": 210, "r": 2.9, "a": false, "alt": "Meme"}, {"s": "work/misc-2", "x": 1396, "y": 2627, "w": 210, "h": 210, "r": -2.1, "a": true, "alt": "Meme"}, {"s": "work/misc-4", "x": 437, "y": 2862, "w": 210, "h": 210, "r": -1.6, "a": true, "alt": "Meme"}, {"s": "work/misc-19", "x": 677, "y": 2858, "w": 210, "h": 210, "r": -0.1, "a": true, "alt": "Meme"}, {"s": "work/misc-20", "x": 913, "y": 2866, "w": 210, "h": 210, "r": -1.3, "a": true, "alt": "Meme"}, {"s": "work/misc-21", "x": 1150, "y": 2871, "w": 210, "h": 210, "r": 0.2, "a": true, "alt": "Meme"}, {"s": "work/misc-24", "x": 1394, "y": 2862, "w": 210, "h": 210, "r": 1.1, "a": false, "alt": "Meme"}, {"s": "work/misc-31", "x": 448, "y": 3115, "w": 210, "h": 210, "r": 0.9, "a": false, "alt": "Meme"}, {"s": "work/misc-32", "x": 671, "y": 3110, "w": 210, "h": 210, "r": 2.4, "a": true, "alt": "Meme"}, {"s": "work/misc-33", "x": 920, "y": 3108, "w": 210, "h": 210, "r": -0.6, "a": true, "alt": "Meme"}, {"s": "work/misc-38", "x": 1149, "y": 3111, "w": 210, "h": 210, "r": 0.8, "a": false, "alt": "Meme"}, {"s": "work/misc-41", "x": 1385, "y": 3102, "w": 210, "h": 210, "r": -2.6, "a": false, "alt": "Meme"}, {"s": "work/misc-36", "x": 438, "y": 3348, "w": 210, "h": 210, "r": -2.0, "a": false, "alt": "Fan-art meme"}, {"s": "work/misc-27", "x": 680, "y": 3353, "w": 210, "h": 210, "r": -2.7, "a": true, "alt": "Meme"}, {"s": "work/charillo-9", "x": 1474, "y": 1798, "w": 170, "h": 302, "r": 1.6, "a": false, "alt": "Glitched cyber-ninja with a fanged mask"}, {"s": "work/charillo-10", "x": 446, "y": 2130, "w": 255, "h": 255, "r": -1.8, "a": false, "alt": "Cat-masked girl in round shades and a CRECK chain"}, {"s": "work/charillo-11", "x": 727, "y": 2138, "w": 255, "h": 255, "r": 2.4, "a": false, "alt": "Chibi punk girl with snake hair and a thorn halo"}, {"s": "work/charillo-12", "x": 1000, "y": 2128, "w": 255, "h": 255, "r": -0.6, "a": false, "alt": "Horned winged demon woman among blossoms"}, {"s": "work/charillo-0", "x": 446, "y": 1507, "w": 255, "h": 255, "r": 2.1, "a": false, "alt": "Silver-haired mage with lightning"}, {"s": "work/charillo-1", "x": 727, "y": 1504, "w": 255, "h": 255, "r": 0.0, "a": false, "alt": "Four-armed capybara monk with dragon"}, {"s": "work/charillo-2", "x": 1000, "y": 1495, "w": 255, "h": 255, "r": 1.8, "a": false, "alt": "Guy pulling a glowing skull spirit"}, {"s": "work/charillo-3", "x": 1290, "y": 1510, "w": 255, "h": 255, "r": 0.7, "a": false, "alt": "Flaming horned skull"}, {"s": "work/charillo-4", "x": 1561, "y": 1493, "w": 255, "h": 255, "r": -0.3, "a": false, "alt": "Bone demon with floating eyes"}, {"s": "work/charillo-5", "x": 436, "y": 1792, "w": 170, "h": 302, "r": 0.2, "a": false, "alt": "Cat-man facepalming"}, {"s": "work/charillo-6", "x": 629, "y": 1809, "w": 255, "h": 255, "r": 2.9, "a": false, "alt": "Scarecrow cat with a jack-o'-lantern"}, {"s": "work/charillo-7", "x": 923, "y": 1810, "w": 255, "h": 255, "r": 1.4, "a": false, "alt": "Pumpkin-headed cat under a full moon"}, {"s": "work/charillo-8", "x": 1195, "y": 1809, "w": 255, "h": 255, "r": -2.9, "a": false, "alt": "Angel with many hands and halos"}, {"s": "work/portrait-0", "x": 2329, "y": 1918, "w": 270, "h": 270, "r": 1.5, "a": false, "alt": "Painted portrait of a woman resting her chin on her hand"}, {"s": "work/portrait-1", "x": 2630, "y": 1926, "w": 270, "h": 270, "r": -2.8, "a": false, "alt": "Painted portrait of a man with slicked-back hair"}, {"s": "work/portrait-2", "x": 2924, "y": 1917, "w": 270, "h": 270, "r": 0.9, "a": false, "alt": "Painted portrait of a woman in bunny ears and sunglasses"}, {"s": "work/portrait-3", "x": 2315, "y": 2223, "w": 270, "h": 270, "r": -0.8, "a": false, "alt": "Painted portrait of a woman with a ponytail looking back"}, {"s": "work/portrait-4", "x": 2617, "y": 2232, "w": 270, "h": 270, "r": 0.3, "a": false, "alt": "Painted portrait of a woman smirking with a bottle"}, {"s": "work/portrait-5", "x": 2928, "y": 2227, "w": 270, "h": 270, "r": -2.9, "a": false, "alt": "Painted portrait of a woman in warm window light"}, {"s": "work/emote-0", "x": 2320, "y": 2625, "w": 150, "h": 184, "r": -2.3, "a": true, "alt": "Smug emote"}, {"s": "work/emote-1", "x": 2475, "y": 2611, "w": 150, "h": 181, "r": 6.6, "a": true, "alt": "Facepalm yelling emote"}, {"s": "work/emote-2", "x": 2636, "y": 2616, "w": 150, "h": 185, "r": 0.1, "a": true, "alt": "Drooling emote"}, {"s": "work/emote-3", "x": 2829, "y": 2625, "w": 150, "h": 181, "r": -7.5, "a": true, "alt": "Facepalm emote"}, {"s": "work/emote-4", "x": 2983, "y": 2625, "w": 150, "h": 184, "r": 3.6, "a": true, "alt": "Rainbow puke emote"}, {"s": "work/emote-5", "x": 2329, "y": 2793, "w": 150, "h": 182, "r": -6.0, "a": true, "alt": "Crying emote"}, {"s": "work/emote-6", "x": 2485, "y": 2804, "w": 150, "h": 164, "r": -1.4, "a": true, "alt": "Confused emote"}, {"s": "work/emote-7", "x": 2641, "y": 2788, "w": 150, "h": 185, "r": -8.1, "a": true, "alt": "Dizzy emote"}, {"s": "work/emote-8", "x": 2805, "y": 2797, "w": 150, "h": 184, "r": 6.7, "a": true, "alt": "Cyclops emote"}, {"s": "work/emote-9", "x": 2984, "y": 2783, "w": 150, "h": 160, "r": 4.9, "a": true, "alt": "Lovestruck emote"}, {"s": "work/emote-10", "x": 2318, "y": 2981, "w": 150, "h": 149, "r": 4.4, "a": true, "alt": "Sick emote"}, {"s": "work/emote-11", "x": 2474, "y": 2965, "w": 150, "h": 183, "r": -5.3, "a": true, "alt": "Fire-eyed rage emote"}, {"s": "work/emote-12", "x": 2643, "y": 2979, "w": 150, "h": 184, "r": 5.3, "a": true, "alt": "Unimpressed emote"}, {"s": "work/emote-13", "x": 2829, "y": 2958, "w": 150, "h": 184, "r": 4.9, "a": true, "alt": "Cold sweat emote"}, {"s": "work/emote-14", "x": 2972, "y": 2968, "w": 150, "h": 173, "r": -3.9, "a": true, "alt": "Blushing smug emote"}, {"s": "work/emote-15", "x": 2331, "y": 3132, "w": 150, "h": 183, "r": -5.4, "a": true, "alt": "Angry vein emote"}, {"s": "work/emote-16", "x": 2499, "y": 3131, "w": 150, "h": 184, "r": 6.8, "a": true, "alt": "Paavam emote"}, {"s": "work/emote-17", "x": 2637, "y": 3159, "w": 150, "h": 184, "r": -2.2, "a": true, "alt": "Toothy grin emote"}, {"s": "work/emote-18", "x": 2816, "y": 3135, "w": 150, "h": 182, "r": -8.6, "a": true, "alt": "Cool sunglasses emote"}, {"s": "work/emote-19", "x": 2979, "y": 3154, "w": 150, "h": 181, "r": 7.3, "a": true, "alt": "Huge grin emote"}, {"s": "work/blob-0", "x": 3261, "y": 2619, "w": 150, "h": 145, "r": 3.4, "a": true, "alt": "Blobfish emote"}, {"s": "work/blob-1", "x": 3441, "y": 2615, "w": 150, "h": 166, "r": -0.4, "a": true, "alt": "Drooling blobfish emote"}, {"s": "work/blob-2", "x": 3262, "y": 2806, "w": 150, "h": 143, "r": -0.5, "a": true, "alt": "Fire-eyed blobfish emote"}, {"s": "work/blob-3", "x": 3437, "y": 2786, "w": 150, "h": 148, "r": 0.1, "a": true, "alt": "Crying blobfish emote"}, {"s": "work/blob-4", "x": 3263, "y": 2981, "w": 150, "h": 144, "r": -8.9, "a": true, "alt": "Sick blobfish emote"}, {"s": "work/potato-0", "x": 3657, "y": 2624, "w": 150, "h": 161, "r": -1.3, "a": true, "alt": "Potato with a cleaver emote"}, {"s": "work/potato-1", "x": 3815, "y": 2631, "w": 150, "h": 152, "r": 4.5, "a": true, "alt": "Blushing potato emote"}, {"s": "work/potato-2", "x": 3983, "y": 2628, "w": 150, "h": 164, "r": -8.2, "a": true, "alt": "Crying potato emote"}, {"s": "work/potato-3", "x": 3669, "y": 2805, "w": 150, "h": 159, "r": 6.8, "a": true, "alt": "Lovestruck potato emote"}, {"s": "work/potato-4", "x": 3830, "y": 2795, "w": 150, "h": 157, "r": -8.4, "a": true, "alt": "Dizzy potato emote"}, {"s": "work/potato-5", "x": 3986, "y": 2798, "w": 150, "h": 147, "r": -0.0, "a": true, "alt": "Puking potato emote"}, {"s": "work/potato-6", "x": 3649, "y": 2976, "w": 150, "h": 166, "r": 8.1, "a": true, "alt": "Potato hugging a heart emote"}, {"s": "work/potato-7", "x": 3822, "y": 2956, "w": 150, "h": 154, "r": -6.2, "a": true, "alt": "Laughing potato emote"}, {"s": "work/potato-8", "x": 4002, "y": 2958, "w": 150, "h": 156, "r": -6.8, "a": true, "alt": "Angry potato emote"}, {"s": "work/cards-sketches", "x": 5240, "y": 2200, "w": 640, "h": 1030, "r": 0, "a": false, "alt": "SpudVerse character sketch sheet: Ghostato, Lucifry, Ronin Root, Samufry, Frankentato and more"}, {"s": "work/card-0", "x": 5930, "y": 2200, "w": 370, "h": 518, "r": 0, "a": false, "alt": "SpudVerse card: Ronin Root"}, {"s": "work/card-1", "x": 6320, "y": 2200, "w": 370, "h": 518, "r": 0, "a": false, "alt": "SpudVerse card: Gyat-ato"}, {"s": "work/card-2", "x": 6710, "y": 2200, "w": 370, "h": 518, "r": 0, "a": false, "alt": "SpudVerse card: Lucifry"}, {"s": "work/cards-details", "x": 7110, "y": 2200, "w": 600, "h": 911, "r": 0, "a": false, "alt": "SpudVerse card anatomy: factions, card types, HP, power, speed, ability and rarity"}, {"s": "work/skill/0", "x": 6520, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Rock golem charge"}, {"s": "work/skill/1", "x": 6634, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Ice shard storm"}, {"s": "work/skill/2", "x": 6748, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Shadow strike"}, {"s": "work/skill/3", "x": 6862, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Frozen in ice"}, {"s": "work/skill/4", "x": 6976, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Lightning surge"}, {"s": "work/skill/5", "x": 7090, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Arcane palm blast"}, {"s": "work/skill/6", "x": 7204, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Fire giant awakening"}, {"s": "work/skill/7", "x": 7318, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Flaming mace swing"}, {"s": "work/skill/8", "x": 7432, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Meteor shower"}, {"s": "work/skill/10", "x": 7546, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Dazed brute"}, {"s": "work/skill/11", "x": 7660, "y": 335, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Flaming sword"}, {"s": "work/skill/12", "x": 6520, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Impaling spear"}, {"s": "work/skill/13", "x": 6634, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Ice staff stance"}, {"s": "work/skill/14", "x": 6748, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Magic circle burst"}, {"s": "work/skill/15", "x": 6862, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Kraken tentacles"}, {"s": "work/skill/16", "x": 6976, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Soul drain"}, {"s": "work/skill/17", "x": 7090, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Mind link"}, {"s": "work/skill/18", "x": 7204, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Hypnosis"}, {"s": "work/skill/19", "x": 7318, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Strength buff"}, {"s": "work/skill/20", "x": 7432, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Toxic breath"}, {"s": "work/skill/21", "x": 7546, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Chicken curse"}, {"s": "work/skill/22", "x": 7660, "y": 463, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Rune orbit"}, {"s": "work/skill/23", "x": 6520, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Flaming flail"}, {"s": "work/skill/24", "x": 6634, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Lightning vortex"}, {"s": "work/skill/25", "x": 6748, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Stone storm"}, {"s": "work/skill/26", "x": 6862, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Tornado pull"}, {"s": "work/skill/27", "x": 6976, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Life drain"}, {"s": "work/skill/28", "x": 7090, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Fireball cast"}, {"s": "work/skill/29", "x": 7204, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Shrink"}, {"s": "work/skill/30", "x": 7318, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Spirit swarm"}, {"s": "work/skill/31", "x": 7432, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Shield up"}, {"s": "work/skill/32", "x": 7546, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Pink palm blast"}, {"s": "work/skill/33", "x": 7660, "y": 591, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Ice cliffs"}, {"s": "work/skill/34", "x": 6520, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Power up"}, {"s": "work/skill/35", "x": 6634, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Water walk"}, {"s": "work/skill/36", "x": 6748, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Void pull"}, {"s": "work/skill/37", "x": 6862, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Iron skin"}, {"s": "work/skill/38", "x": 6976, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Staff slam"}, {"s": "work/skill/39", "x": 7090, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Chaos arrows"}, {"s": "work/skill/40", "x": 7204, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Uplift"}, {"s": "work/skill/41", "x": 7318, "y": 719, "w": 104, "h": 119, "r": 0, "a": true, "alt": "Skill icon: Whirlwind stance"}, {"s": "work/heist-0", "x": 6520, "y": 1560, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Silenced pistol and magazine"}, {"s": "work/heist-1", "x": 6764, "y": 1560, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Grappling hook and rope"}, {"s": "work/heist-2", "x": 7008, "y": 1560, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Dynamite bundle"}, {"s": "work/heist-3", "x": 7252, "y": 1560, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Grenade"}, {"s": "work/heist-4", "x": 7496, "y": 1560, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Security pass on a lanyard"}, {"s": "work/heist-5", "x": 6520, "y": 1804, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Leather duffel bag"}, {"s": "work/heist-6", "x": 6764, "y": 1804, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Van #06 polaroids"}, {"s": "work/heist-7", "x": 7008, "y": 1804, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Walkie-talkie"}, {"s": "work/heist-8", "x": 7252, "y": 1804, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Balaclava and gloves"}, {"s": "work/heist-9", "x": 7496, "y": 1804, "w": 230, "h": 230, "r": 0, "a": false, "alt": "Game asset screen: Bank blueprint"}, {"s": "work/comic-0", "x": 1870, "y": 906, "w": 131, "h": 705, "r": 0, "a": true, "alt": "Comic page 1: breaking news, a portal and timestamps"}, {"s": "work/comic-1", "x": 2011, "y": 906, "w": 144, "h": 408, "r": 0, "a": true, "alt": "Comic page 2: the house, the garage and a plan"}, {"s": "work/comic-2", "x": 2165, "y": 906, "w": 150, "h": 626, "r": 0, "a": true, "alt": "Comic page 3: message sent, phones start pinging"}, {"s": "work/comic-page-1", "x": 1872, "y": 1690, "w": 440, "h": 867, "r": 0, "a": false, "alt": "Comic page: an elephant warrior and a samurai elephant clash in a field"}, {"s": "work/chardes-0", "x": 2630, "y": 430, "w": 270, "h": 270, "r": 1.2, "a": false, "alt": "Silver-haired soldier in sci-fi armour"}, {"s": "work/chardes-1", "x": 2920, "y": 430, "w": 480, "h": 270, "r": -0.8, "a": false, "alt": "Two superhero designs with head turnarounds"}, {"s": "work/chardes-2", "x": 3420, "y": 430, "w": 270, "h": 270, "r": 1.5, "a": false, "alt": "Cyber samurai with neon horns"}, {"s": "work/chardes-3", "x": 3710, "y": 430, "w": 270, "h": 270, "r": -1.2, "a": false, "alt": "Short-haired woman in a tank top"}, {"s": "work/cd/home-hero", "x": -5000, "y": 1240, "w": 560, "h": 366, "r": 0, "a": false, "alt": "cets.wtf home hero"}, {"s": "work/cd/nav-open", "x": -5000, "y": 1636, "w": 560, "h": 366, "r": 0, "a": false, "alt": "cets.wtf menu open: IP, community, streetwear, what's next"}, {"s": "work/cd/portals-modal", "x": -5000, "y": 2032, "w": 560, "h": 366, "r": 0, "a": false, "alt": "All Cets Portals modal"}, {"s": "work/cd/home-panel", "x": -4410, "y": 1240, "w": 1000, "h": 1344, "r": 0, "a": false, "alt": "Homepage design board with mobile layouts and art direction notes"}, {"s": "work/cd/nav-panel", "x": -3380, "y": 1240, "w": 760, "h": 496, "r": 0, "a": false, "alt": "Navigation menu explorations, desktop and mobile"}, {"s": "work/cd/portals-panel", "x": -3380, "y": 1770, "w": 760, "h": 461, "r": 0, "a": false, "alt": "Portals modal with Cetsworld illustrations"}, {"s": "work/cd/hero-variants", "x": -3380, "y": 2270, "w": 760, "h": 143, "r": 0, "a": false, "alt": "Homepage hero explorations"}, {"s": "work/cd/team", "x": -2590, "y": 1240, "w": 360, "h": 510, "r": 0, "a": false, "alt": "Team page design"}, {"s": "work/cd/community", "x": -2200, "y": 1240, "w": 360, "h": 510, "r": 0, "a": false, "alt": "Community page design"}, {"s": "work/cd/cetsnips-1", "x": -1810, "y": 1240, "w": 360, "h": 224, "r": 0, "a": false, "alt": "Cetsnips gallery page"}, {"s": "work/cd/cetsnips-2", "x": -1810, "y": 1484, "w": 360, "h": 224, "r": 0, "a": false, "alt": "Cetsnips gallery slider"}, {"s": "work/cd/pillars", "x": -1420, "y": 1240, "w": 330, "h": 366, "r": 0, "a": false, "alt": "4 pillars of Cets footer section"}, {"s": "work/cd/streetwear-dark", "x": -1060, "y": 1240, "w": 300, "h": 570, "r": 0, "a": false, "alt": "Streetwear page, dark version"}, {"s": "work/cd/streetwear-light", "x": -730, "y": 1240, "w": 300, "h": 570, "r": 0, "a": false, "alt": "Streetwear page, light version"}, {"s": "work/cd/whats-next", "x": -2590, "y": 1920, "w": 900, "h": 627, "r": 0, "a": false, "alt": "What's Next event cards with card status system and roadmap notes"}, {"s": "work/cd/drip-notes", "x": -1660, "y": 1920, "w": 700, "h": 650, "r": 0, "a": false, "alt": "Cets Drip page with art direction notes"}, {"s": "work/cd/ceti-panel", "x": -3730, "y": 2762, "w": 640, "h": 688, "r": 0, "a": false, "alt": "Ceticatures page design board with notes"}, {"s": "work/cd/ceti-notes", "x": -3070, "y": 2762, "w": 680, "h": 680, "r": 0, "a": false, "alt": "Ceticatures page with art direction notes"}, {"s": "work/cd/ceti-long", "x": -2370, "y": 2762, "w": 300, "h": 668, "r": 0, "a": false, "alt": "Ceticatures page, full length"}, {"s": "work/cd/ceti-banner", "x": -2050, "y": 2762, "w": 330, "h": 309, "r": 0, "a": false, "alt": "Ceticatures banner and card art"}, {"s": "work/cd/ceti-popup", "x": -2050, "y": 3102, "w": 360, "h": 224, "r": 0, "a": false, "alt": "Ceticature card popup"}, {"s": "work/cd/fomo", "x": -5000, "y": 2762, "w": 1200, "h": 561, "r": 0, "a": false, "alt": "FOMO x CETS poster and campaign collage"}, {"s": "work/cd/cets-world", "x": -1500, "y": 2762, "w": 400, "h": 1473, "r": 0, "a": false, "alt": "Cets World story page with art direction notes"}, {"s": "work/cd/iso", "x": -1070, "y": 2762, "w": 300, "h": 246, "r": 0, "a": false, "alt": "Cets on Creck isometric world"}, {"s": "work/cd/pillars-dark", "x": -1070, "y": 3042, "w": 300, "h": 373, "r": 0, "a": false, "alt": "4 pillars section, dark version"}, {"s": "work/mock/00", "x": -2370, "y": 3806, "w": 186, "h": 126, "r": 0, "a": false, "alt": "CETS merch mockup 1"}, {"s": "work/mock/01", "x": -2170, "y": 3803, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 2"}, {"s": "work/mock/02", "x": -1970, "y": 3803, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 3"}, {"s": "work/mock/03", "x": -1770, "y": 3803, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 4"}, {"s": "work/mock/04", "x": -2370, "y": 3953, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 5"}, {"s": "work/mock/05", "x": -2170, "y": 3953, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 6"}, {"s": "work/mock/06", "x": -1970, "y": 3953, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 7"}, {"s": "work/mock/07", "x": -1770, "y": 3953, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 8"}, {"s": "work/mock/08", "x": -2370, "y": 4103, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 9"}, {"s": "work/mock/09", "x": -2170, "y": 4103, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 10"}, {"s": "work/mock/10", "x": -1970, "y": 4103, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 11"}, {"s": "work/mock/11", "x": -1770, "y": 4103, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 12"}, {"s": "work/mock/12", "x": -2370, "y": 4253, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 13"}, {"s": "work/mock/13", "x": -2170, "y": 4257, "w": 186, "h": 123, "r": 0, "a": false, "alt": "CETS merch mockup 14"}, {"s": "work/mock/14", "x": -1970, "y": 4253, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 15"}, {"s": "work/mock/15", "x": -1770, "y": 4253, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 16"}, {"s": "work/mock/16", "x": -2370, "y": 4403, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 17"}, {"s": "work/mock/17", "x": -2170, "y": 4403, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 18"}, {"s": "work/mock/18", "x": -1970, "y": 4403, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 19"}, {"s": "work/mock/19", "x": -1770, "y": 4403, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 20"}, {"s": "work/mock/20", "x": -2370, "y": 4553, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 21"}, {"s": "work/mock/21", "x": -2170, "y": 4553, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 22"}, {"s": "work/mock/22", "x": -1970, "y": 4553, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 23"}, {"s": "work/mock/23", "x": -1770, "y": 4552, "w": 186, "h": 133, "r": 0, "a": false, "alt": "CETS merch mockup 24"}, {"s": "work/mock/24", "x": -2370, "y": 4702, "w": 186, "h": 133, "r": 0, "a": false, "alt": "CETS merch mockup 25"}, {"s": "work/mock/25", "x": -2170, "y": 4702, "w": 186, "h": 133, "r": 0, "a": false, "alt": "CETS merch mockup 26"}, {"s": "work/mock/26", "x": -1970, "y": 4704, "w": 186, "h": 130, "r": 0, "a": false, "alt": "CETS merch mockup 27"}, {"s": "work/mock/27", "x": -1770, "y": 4703, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 28"}, {"s": "work/mock/28", "x": -2370, "y": 4853, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 29"}, {"s": "work/mock/29", "x": -2170, "y": 4872, "w": 186, "h": 94, "r": 0, "a": false, "alt": "CETS merch mockup 30"}, {"s": "work/mock/30", "x": -1970, "y": 4853, "w": 186, "h": 132, "r": 0, "a": false, "alt": "CETS merch mockup 31"}, {"s": "work/mock/31", "x": -1770, "y": 4854, "w": 186, "h": 129, "r": 0, "a": false, "alt": "CETS merch mockup 32"}, {"s": "work/cd/hl-0", "x": -5000, "y": 500, "w": 1199, "h": 560, "r": 0, "a": false, "alt": "Highlight: FOMO × CETS campaign poster and collage"}, {"s": "work/cd/hl-1", "x": -3773, "y": 500, "w": 857, "h": 560, "r": 0, "a": false, "alt": "Highlight: cets.wtf home hero: real & unapologetic"}, {"s": "work/cd/hl-2", "x": -2888, "y": 500, "w": 896, "h": 560, "r": 0, "a": false, "alt": "Highlight: 313 hoodie neon lookbook"}, {"s": "work/cd/hl-3", "x": -1964, "y": 500, "w": 403, "h": 560, "r": 0, "a": false, "alt": "Highlight: Cets World story page"}, {"s": "work/cd/hl-4", "x": -1533, "y": 500, "w": 558, "h": 560, "r": 0, "a": false, "alt": "Highlight: FU Shades launch poster"}, {"s": "work/notice-board", "x": 5240, "y": 730, "w": 1220, "h": 930, "r": 0, "a": false, "alt": "Spud x Notice moodboard: clock concepts (sundials, modular wall clock, magnetic replaceable dials) and graffiti-style road sign designs"}];
   const illoEl = document.getElementById("illo");
-  // Phones/tablets: very large images use a lighter (~11MP) version so iOS Safari does not run out of memory.
   const TOUCH = matchMedia("(pointer: coarse)").matches;
   const MID = new Set(["work/cd/ceti-long", "work/cd/ceti-notes", "work/cd/ceti-panel", "work/cd/cets-world", "work/cd/drip-notes", "work/cd/fomo", "work/cd/home-panel", "work/cd/nav-panel", "work/cd/portals-panel", "work/cd/streetwear-dark", "work/cd/streetwear-light", "work/cd/whats-next", "work/notice-board"]);
   const hiOf = s => TOUCH && MID.has(s) ? s + "-m" : s;
@@ -740,15 +738,6 @@ svg.draw path.guide { stroke: none; }
     b.dataset.full = `${hiOf(p.s)}.webp`; b.setAttribute("aria-label", "Open: " + p.alt);
     b.innerHTML = `<img data-src="${/(emote|blob|potato|misc)-|skill\/|mock\//.test(p.s) ? p.s : p.s + "-t"}.webp" data-hi="${hiOf(p.s)}.webp" alt="${p.alt}" width="${p.w}" height="${p.h}" draggable="false" decoding="async">`;
     illoEl.appendChild(b);
-  });
-  const zonesEl = document.getElementById("zones");
-  ZONES.forEach((z, i) => {
-    const el = document.createElement("section");
-    el.className = "abs zone";
-    el.style.left = z.x + "px"; el.style.top = z.y + "px";
-    el.style.transform = `rotate(${[-1.2, .8, -.6, .9][i % 4]}deg)`;
-    el.innerHTML = `<div><h2>${z.t}</h2><p style="margin-top:10px">${z.d}</p></div><span class="chip">work dropping soon</span>`;
-    zonesEl.appendChild(el);
   });
 
   const vp = document.getElementById("viewport");
@@ -765,12 +754,10 @@ svg.draw path.guide { stroke: none; }
     vp.style.backgroundSize = `${g}px ${g}px`;
     vp.style.backgroundPosition = `${s.x}px ${s.y}px`;
     label.textContent = Math.round(s.k * 100) + "%";
-    // Promote to a GPU layer only while moving; dropping it after lets the browser re-render crisp at the new zoom.
     const w = world; w.classList.add("moving");
     clearTimeout(apply.t);
     apply.t = setTimeout(() => { w.classList.remove("moving"); hydrate(); }, 160);
   }
-  // Load artwork lazily: light previews for what's near the screen, full-res swapped in once you zoom past the preview's sharpness.
   function sharpen(img) {
     const hi = img.dataset.hi; if (!hi || !img.naturalWidth) return;
     const r = img.getBoundingClientRect(), W = innerWidth, H = innerHeight;
@@ -788,7 +775,6 @@ svg.draw path.guide { stroke: none; }
       else sharpen(img);
     });
   }
-  // Once the home view is up, quietly fetch the work board's previews so opening a category feels instant.
   function prefetchWork() {
     const queue = [...boards.work.querySelectorAll("img[data-src]")];
     const next = () => {
@@ -805,10 +791,8 @@ svg.draw path.guide { stroke: none; }
     const wx = (cx - s.x) / s.k, wy = (cy - s.y) / s.k;
     s.k = k; s.x = cx - wx * k; s.y = cy - wy * k; apply();
   }
-  // Fit the hub (title, arrows, about me) on first view.
   const HUB = { x0: -470, x1: 470, y0: -390, y1: 380 };
-  // Start views for each category on the work board.
-  const CATS = { cd: { x0: -5100, x1: -1900, y0: 120, y1: 1780 }, artsy: { x0: 330, x1: 2450, y0: -60, y1: 1300 }, design: { x0: 5130, x1: 7870, y0: -60, y1: 1500 } };
+  const CATS = { cd: { x0: -5100, x1: -1900, y0: -60, y1: 1780 }, artsy: { x0: 330, x1: 2450, y0: -60, y1: 1300 }, design: { x0: 5130, x1: 7870, y0: -60, y1: 1500 } };
   const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function fitTarget(B, maxK) {
     const w = vp.clientWidth, h = vp.clientHeight;
@@ -843,14 +827,12 @@ svg.draw path.guide { stroke: none; }
   function jump(cat, animate) {
     const B = CATS[cat];
     let target = fitTarget(B, 0.75);
-    // Tall, narrow screens (phones in portrait): fit the category's height instead and start at its left edge.
     if (vp.clientHeight > vp.clientWidth * 1.2) {
       const k = Math.min(0.75, (vp.clientHeight - 120) / (B.y1 - B.y0 + 60));
       target = { k, x: 16 - B.x0 * k, y: 70 - B.y0 * k };
     }
     if (animate) animateTo(target, 520); else { s = target; apply(); }
   }
-  // Click a cluster: dive into it, then land on that category's start view.
   function openCat(btn) {
     const cat = btn.dataset.cat, r = btn.getBoundingClientRect();
     const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
@@ -874,7 +856,6 @@ svg.draw path.guide { stroke: none; }
   document.getElementById("toHome").onclick = goHome;
   document.querySelectorAll(".cat-btn").forEach(b => b.onclick = () => jump(b.dataset.jump, true));
 
-  // Drag + pinch
   const pts = new Map();
   let last = null, pinch = null, moved = 0, downTarget = null;
   vp.addEventListener("pointerdown", e => {
@@ -923,7 +904,6 @@ svg.draw path.guide { stroke: none; }
 
   vp.addEventListener("wheel", e => {
     e.preventDefault();
-    // Scroll zooms around the cursor; trackpad pinch (ctrlKey) uses finer steps.
     const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
     const rate = e.ctrlKey ? 0.01 : 0.0015;
     zoomAt(e.clientX, e.clientY, s.k * Math.exp(-dy * rate));
@@ -936,11 +916,9 @@ svg.draw path.guide { stroke: none; }
   document.getElementById("home").onclick = () => home(true);
   document.querySelectorAll(".go-cat").forEach(b => b.onclick = () => openCat(document.querySelector(`.cluster[data-cat="${b.dataset.cat}"]`)));
 
-  // Resume lightbox (keyboard path; pointer path handled in up())
   const box = document.getElementById("lightbox");
   const resumeBtn = document.getElementById("resumeBtn");
   let opener = null;
-  // Lightbox with next/previous: the set is the album covers, the open gallery, the merch wall, or the artworks in the same canvas section.
   let lbSet = [], lbIdx = 0;
   function setFor(el) {
     if (el === resumeBtn) return [el];
@@ -959,7 +937,15 @@ svg.draw path.guide { stroke: none; }
   function showBox(el) {
     opener = el;
     const img = el.querySelector("img"), li = document.getElementById("lightImg");
-    li.src = el.dataset.full || img.dataset.hi || (img.id === "resumeImg" ? "resume-full.webp" : img.src); li.alt = img.alt; li.classList.toggle("doc", el === resumeBtn);
+    const src = el.dataset.full || img.dataset.hi || (img.id === "resumeImg" ? "resume-full.webp?v=2" : img.src);
+    const msg = document.getElementById("lbMsg"); msg.hidden = true;
+    li.alt = img.alt; li.classList.toggle("doc", el === resumeBtn);
+    if (li.getAttribute("src") !== src) {
+      box.classList.add("loading"); li.classList.remove("failed");
+      li.onload = () => box.classList.remove("loading");
+      li.onerror = () => { box.classList.remove("loading"); li.classList.add("failed"); msg.hidden = false; };
+      li.src = src;
+    }
     box.scrollTop = 0;
     if (el.classList.contains("flow-item")) flowGo(lbIdx);
     [lbIdx + 1, lbIdx - 1].forEach(j => { const n = lbSet[(j + lbSet.length) % lbSet.length]; if (n && n !== el) { const ni = n.querySelector("img"); const pre = new Image(); pre.src = n.dataset.full || (ni && (ni.dataset.hi || ni.src)) || ""; } });
@@ -989,17 +975,16 @@ svg.draw path.guide { stroke: none; }
     if (e.target.closest && e.target.closest("#ipod, #flowPop") && (e.key === "ArrowLeft" || e.key === "ArrowRight")) { e.preventDefault(); step(e.key === "ArrowRight" ? 1 : -1); return; }
     if (e.key === "Escape" && isOpen) { flowClose(); return; }
     if (openGal) { if (e.key === "Escape") closeGallery(); return; }
-    const step = 80;
-    if (e.key === "ArrowLeft") { s.x += step; apply(); }
-    else if (e.key === "ArrowRight") { s.x -= step; apply(); }
-    else if (e.key === "ArrowUp") { s.y += step; apply(); }
-    else if (e.key === "ArrowDown") { s.y -= step; apply(); }
+    const nudge = 80;
+    if (e.key === "ArrowLeft") { s.x += nudge; apply(); }
+    else if (e.key === "ArrowRight") { s.x -= nudge; apply(); }
+    else if (e.key === "ArrowUp") { s.y += nudge; apply(); }
+    else if (e.key === "ArrowDown") { s.y -= nudge; apply(); }
     else if (e.key === "+" || e.key === "=") zoomAt(...center(), s.k * 1.25);
     else if (e.key === "-") zoomAt(...center(), s.k / 1.25);
     else if (e.key === "0") { if (mode === "home") home(true); else jump("artsy", true); }
   });
 
-  // 1/1 stack opens a gallery overlay; each card in it opens full size in the lightbox.
   let openGal = null, galOpener = null;
   function openGallery(stk) { galOpener = stk; openGal = document.getElementById(stk.dataset.gallery); openGal.hidden = false; openGal.scrollTop = 0; openGal.querySelector(".close-gallery").focus(); }
   function closeGallery() { if (!openGal) return; openGal.hidden = true; openGal = null; if (galOpener) galOpener.focus({ preventScroll: true }); }
@@ -1007,7 +992,6 @@ svg.draw path.guide { stroke: none; }
     g.querySelector(".close-gallery").onclick = closeGallery;
     g.addEventListener("click", e => { const b = e.target.closest(".g-grid button"); if (b) openBox(b); else if (e.target === g) closeGallery(); });
   });
-  // Album art Cover Flow.
   const ALBUM_ALT = ["Two men floating head to toe across a cosmic clock face", "A glowing bulb with moths in the dark", "A split suitcase packed with clothes and books", "A payphone reading SECRETS on a pole at dusk", "A man facing a smoke-faced figure in a mirror"];
   const ALBUMS = ALBUM_ALT.map((alt, i) => ({ c: `work/album/${i}.webp`, full: `work/album/${i}-full.webp`, alt }));
   const flow = document.getElementById("flow"), pop = document.getElementById("flowPop"), ipod = document.getElementById("ipod");
@@ -1016,7 +1000,6 @@ svg.draw path.guide { stroke: none; }
     const d = document.createElement("div"); d.className = "flow-item";
     d.dataset.full = al.full;
     d.innerHTML = `<div class="vinyl"></div><div class="sleeve"><img src="${al.c}" alt="${al.alt}" draggable="false" decoding="async"></div>`;
-    // Click a cover to see it big.
     d.addEventListener("click", () => { if (!isOpen) return; flowGo(i); clearTimeout(idleT); openBox(d); });
     flow.appendChild(d); return d;
   });
@@ -1031,7 +1014,6 @@ svg.draw path.guide { stroke: none; }
         : `translateX(${Math.sign(o) * (150 + (a - 1) * 70)}px) translateZ(-80px) rotateY(${-Math.sign(o) * 62}deg)`;
       d.style.opacity = a > 3 ? 0 : 1;
     });
-    // The centred cover tracks the hover position, so the cover under the cursor is the one you click.
     const W = pop.offsetWidth, shift = isOpen ? (cur + .5) / ALBUMS.length * W - W / 2 + 50 : 0;
     flow.style.transform = `translateX(${shift}px)`;
   }
@@ -1050,7 +1032,6 @@ svg.draw path.guide { stroke: none; }
   ipod.querySelector(".w-menu").onclick = flowClose;
   const listen = () => { if (!isOpen) return flowOpen(); poke(); };
   ipod.querySelector(".w-play").onclick = listen; ipod.querySelector(".w-center").onclick = listen;
-  // Scrolling over the iPod or the popped-out covers flips albums instead of zooming.
   let wheelAcc = 0;
   [ipod, pop].forEach(el => el.addEventListener("wheel", e => {
     if (el === pop && !isOpen) return;
@@ -1058,7 +1039,6 @@ svg.draw path.guide { stroke: none; }
     wheelAcc += Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
     if (Math.abs(wheelAcc) > 60) { step(Math.sign(wheelAcc)); wheelAcc = 0; }
   }, { passive: false }));
-  // Click wheel: drag around it; every 30 degrees moves one album.
   const wheel = document.getElementById("wheel");
   let wAng = null, wAcc = 0;
   const angle = e => { const r = wheel.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; };
@@ -1071,7 +1051,6 @@ svg.draw path.guide { stroke: none; }
   });
   const wEnd = () => { wAng = null; };
   wheel.addEventListener("pointerup", wEnd); wheel.addEventListener("pointercancel", wEnd);
-  // Hover across the popped-out covers to flip through them (mouse); swipe on touch.
   pop.addEventListener("pointermove", e => {
     if (!isOpen || e.pointerType === "touch") return;
     const r = pop.getBoundingClientRect(), f = Math.min(.999, Math.max(0, (e.clientX - r.left) / r.width));
@@ -1081,10 +1060,8 @@ svg.draw path.guide { stroke: none; }
   pop.addEventListener("pointerdown", e => { if (!isOpen || e.pointerType !== "touch") return; sx = e.clientX; poke(); });
   pop.addEventListener("pointermove", e => { if (sx === null) return; const dx = e.clientX - sx; if (Math.abs(dx) > 50) { step(dx < 0 ? 1 : -1); sx = e.clientX; } });
   pop.addEventListener("pointerup", () => { sx = null; }); pop.addEventListener("pointercancel", () => { sx = null; });
-  // Click anywhere else: back into the screen.
   document.addEventListener("pointerdown", e => { if (isOpen && !e.target.closest("#ipod, #flowPop, #lightbox")) flowClose(); }, true);
 
-  // Cet Runner video: click to play with sound.
   document.querySelectorAll(".vid-wrap").forEach(w => {
     const v = w.querySelector("video"), b = w.querySelector(".vid-play");
     b.addEventListener("click", () => { v.controls = true; b.hidden = true; v.play().catch(() => {}); });
@@ -1099,6 +1076,7 @@ svg.draw path.guide { stroke: none; }
     try { navigator.clipboard.writeText(txt).then(() => done(true), () => { selectMail(); done(false); }); }
     catch (_) { selectMail(); done(false); }
   });
+  document.addEventListener("error", e => { if (e.target.tagName === "IMG" && e.target.id !== "lightImg") e.target.classList.add("failed"); }, true);
   home(false);
 })();
 </script>

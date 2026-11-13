@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found · Spud's Portfolio</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3F3F1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bebas Neue";src:url("/fonts/bebas-neue-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Caveat";src:url("/fonts/caveat-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("/fonts/dm-sans-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("/fonts/space-mono-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{color-scheme:light;--paper:#F3F3F1;--dot:#C4C5C9;--ink:#1B1A1E;--muted:#5F5D66;--red:#E1251B;--panel:#FFFFFF;--line:#DADAD7;--note-yellow:#FFE680;--tape:rgba(255,255,255,.55);
+  --display:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;--hand:"Caveat","Segoe Print","Bradley Hand",cursive;--note:"DM Sans","Helvetica Neue",Arial,sans-serif;--mono:"Space Mono",ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;background-color:var(--paper);color:var(--ink);font-family:var(--note);
+  background-image:radial-gradient(circle,var(--dot) 1.1px,transparent 1.3px);background-size:24px 24px;
+  padding:calc(72px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.brand{position:fixed;left:calc(16px + env(safe-area-inset-left,0px));top:calc(16px + env(safe-area-inset-top,0px));font:400 26px/1.2 var(--display);letter-spacing:.02em;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px 12px;color:var(--ink);text-decoration:none}
+main{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+h1{margin:0;font:400 clamp(140px,34vw,300px)/.82 var(--display);letter-spacing:.01em;color:var(--ink)}
+h1 span{color:var(--red)}
+.tag{margin:0;font:700 13px/1 var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.note{position:relative;margin-top:34px;width:min(100%,300px);padding:24px 20px 20px;background:var(--note-yellow);transform:rotate(-2.5deg);
+  box-shadow:2px 10px 18px rgba(27,26,30,.22),inset 0 -10px 18px rgba(0,0,0,.04);font:700 27px/1.15 var(--hand)}
+.note::before{content:"";position:absolute;top:-11px;left:50%;width:74px;height:24px;margin-left:-37px;background:var(--tape);transform:rotate(-4deg);box-shadow:0 1px 2px rgba(27,26,30,.12)}
+.note p{margin:0 0 14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;background:var(--ink);color:var(--paper);font:500 15px/1 var(--note);text-decoration:none;transform:rotate(2.5deg)}
+.btn:hover{background:var(--red)}
+.btn:focus-visible,.brand:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+</style>
+</head>
+<body>
+<a class="brand" href="/">SPUD*</a>
+<main>
+  <p class="tag">Page not found</p>
+  <h1>4<span>0</span>4</h1>
+  <div class="note">
+    <p>You've wandered off the edge of the canvas. Nothing's drawn out here yet.</p>
+    <a class="btn" href="/">Back to the start</a>
+  </div>
+</main>
+</body>
+</html>
