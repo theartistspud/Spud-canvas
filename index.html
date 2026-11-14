@@ -342,6 +342,10 @@ svg.draw path.guide { stroke: none; }
   position: fixed; z-index: 21; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px));
   font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 10px rgba(27,26,30,.08);
 }
+.vid-wrap.film { border-radius: 10px; box-shadow: 0 0 0 3px var(--ink), 0 14px 30px rgba(27,26,30,.28); }
+.vid-wrap.film .vid-play span { background: #FF8AC4; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.film-cap { margin: 0; font: 12px/1.2 var(--mono); color: var(--muted); white-space: nowrap; }
+.film-cap::before { content: "# "; opacity: .6; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
 .nojs { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--paper); color: var(--ink); }
@@ -449,7 +453,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   </div>
 
   <div id="work" class="board" hidden>
-    <section class="abs part" style="left:-5070px; top:130px; width:4680px; height:4990px;" aria-label="Creative Direction"><h2 class="part-title">CREATIVE DIRECTION</h2></section>
+    <section class="abs part" style="left:-5070px; top:130px; width:4680px; height:5570px;" aria-label="Creative Direction"><h2 class="part-title">CREATIVE DIRECTION</h2></section>
     <section class="abs part" style="left:380px; top:130px; width:4410px; height:3740px;" aria-label="Artsy"><h2 class="part-title">ARTSY</h2></section>
     <section class="abs part" style="left:5180px; top:130px; width:2640px; height:3240px;" aria-label="Design"><h2 class="part-title">DESIGN</h2></section>
     <h3 class="abs zone-title" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h3>
@@ -492,7 +496,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     <section class="abs drip" style="left:-5040px; top:3680px; width:2570px; height:1080px;" aria-label="CETS merch drops">
       <h4 class="drip-title"><span>CETS DRIP</span></h4>
       <span class="drop-name" style="left:20px; top:176px; --r:-2deg; font-size:110px;">313</span>
-      <button class="tb print" type="button" data-full="work/drip/hoodie-p.webp" aria-label="Open: 313 hoodie with built-in mask" style="left:30px; top:250px; width:180px; height:360px; --r:-5deg;"><img data-src="work/drip/hoodie-p-dt.webp" alt="313 hoodie with built-in mask" draggable="false" decoding="async"></button>
+      <button class="tb print" type="button" data-full="work/drip/hoodie-p.webp" aria-label="Open: 313 hoodie with built-in mask" style="left:30px; top:250px; width:172px; height:336px; --r:-5deg;"><img data-src="work/drip/hoodie-p-dt.webp" alt="313 hoodie with built-in mask" draggable="false" decoding="async"></button>
       <button class="tb print" type="button" data-full="work/drip/look-0.webp" aria-label="Open: 313 hoodie neon lookbook shot 1" style="left:236px; top:262px; width:110px; height:268px; --r:-8deg;"><img data-src="work/drip/look-0-dt.webp" alt="313 hoodie neon lookbook shot 1" draggable="false" decoding="async"></button>
       <button class="tb print" type="button" data-full="work/drip/look-1.webp" aria-label="Open: 313 hoodie neon lookbook shot 2" style="left:330px; top:250px; width:110px; height:268px; --r:-2deg;"><img data-src="work/drip/look-1-dt.webp" alt="313 hoodie neon lookbook shot 2" draggable="false" decoding="async"></button>
       <button class="tb print" type="button" data-full="work/drip/look-2.webp" aria-label="Open: 313 hoodie neon lookbook shot 3" style="left:424px; top:256px; width:110px; height:268px; --r:4deg;"><img data-src="work/drip/look-2-dt.webp" alt="313 hoodie neon lookbook shot 3" draggable="false" decoding="async"></button>
@@ -533,6 +537,24 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
       <svg class="doodle" style="left:1150px; top:470px; width:90px; height:60px;" viewBox="0 0 90 60" aria-hidden="true"><path d="M6 50 C 30 10, 60 6, 82 20 M72 10 L84 20 L70 28"/></svg>
       <svg class="doodle" style="left:2120px; top:416px; width:46px; height:46px;" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 4 L34 24 L54 28 L34 33 L30 56 L26 33 L6 28 L26 24 Z"/></svg>
     </section>
+    <h3 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:4760px;">VIDEO PRODUCTION</h3>
+    <p class="abs proj-desc" style="left:-4998px; top:4826px;">Drop films and social cuts made for the CETS merch releases.</p>
+    <p class="abs proj-role" style="left:-4998px; top:4858px;">Creative direction · Video production</p>
+    <p class="abs film-cap" style="left:-5000px; top:4906px;">313 · drop film</p>
+    <div class="abs vid-wrap film" style="left:-5000px; top:4940px; width:1003px; height:680px;">
+      <video src="work/video/313-film.mp4" poster="work/video/313-film.jpg" preload="none" playsinline aria-label="313 drop film"></video>
+      <button class="vid-play" type="button" aria-label="Play: 313 drop film"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
+    <p class="abs film-cap" style="left:-3957px; top:4906px;">CETS · drop film</p>
+    <div class="abs vid-wrap film" style="left:-3957px; top:4940px; width:1209px; height:680px;">
+      <video src="work/merch/vid-0.mp4" poster="work/merch/vid-0.jpg" preload="none" playsinline aria-label="CETS merch drop film"></video>
+      <button class="vid-play" type="button" aria-label="Play: CETS merch drop film"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
+    <p class="abs film-cap" style="left:-2708px; top:4906px;">CETS · unboxing</p>
+    <div class="abs vid-wrap film" style="left:-2708px; top:4940px; width:383px; height:680px;">
+      <video src="work/merch/vid-1.mp4" poster="work/merch/vid-1.jpg" preload="none" playsinline aria-label="CETS merch unboxing video"></video>
+      <button class="vid-play" type="button" aria-label="Play: CETS merch unboxing video"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
     <p class="abs sublabel" style="left:6524px; top:886px; white-space:nowrap;">CET RUNNER</p>
     <div class="abs vid-wrap" style="left:6520px; top:930px; width:1000px; height:294px;">
       <video id="cetVid" src="work/dino/cet-runner.mp4" poster="work/dino/poster.jpg" preload="none" playsinline aria-label="Gameplay of Cet Runner, a pixel-art endless runner Spud made"></video>
@@ -1065,6 +1087,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   document.querySelectorAll(".vid-wrap").forEach(w => {
     const v = w.querySelector("video"), b = w.querySelector(".vid-play");
     b.addEventListener("click", () => { v.controls = true; b.hidden = true; v.play().catch(() => {}); });
+    v.addEventListener("play", () => document.querySelectorAll(".vid-wrap video").forEach(o => { if (o !== v) o.pause(); }));
     v.addEventListener("ended", () => { v.controls = false; b.hidden = false; });
   });
 
