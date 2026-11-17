@@ -367,18 +367,13 @@ svg.draw path.guide { stroke: none; }
 .hire-btn span { position: relative; font: 700 136px/1 var(--hand); color: var(--red); white-space: nowrap; }
 .hire-btn:hover { transform: rotate(-3deg) scale(1.05); }
 .hire-btn:focus-visible { outline: 3px solid var(--red); outline-offset: 8px; border-radius: 40px; }
-.tv { width: 250px; height: 210px; }
-.tv-ant { position: absolute; left: 92px; top: 0; width: 66px; height: 34px; }
-.tv-ant::before, .tv-ant::after { content: ""; position: absolute; bottom: 0; width: 4px; height: 40px; border-radius: 2px; background: #3A3940; transform-origin: bottom center; }
-.tv-ant::before { left: 30px; transform: rotate(-32deg); } .tv-ant::after { left: 32px; transform: rotate(30deg); }
-.tv-body { position: absolute; left: 0; top: 30px; width: 250px; height: 180px; box-sizing: border-box; display: flex; gap: 12px; padding: 14px; border-radius: 20px; background: linear-gradient(160deg, #3A3940, #222127); box-shadow: inset 0 2px 0 rgba(255,255,255,.12), 0 10px 22px rgba(27,26,30,.3); }
-.tv-screen { position: relative; flex: 1; border-radius: 18px / 24px; overflow: hidden; background: #0C0C0D; box-shadow: inset 0 0 0 3px #111, inset 0 0 18px rgba(0,0,0,.8); }
-.tv-screen img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; opacity: .92; transition: opacity .2s; }
-.tv-screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.18) 0 1px, transparent 1px 3px); pointer-events: none; }
+.tv { width: 250px; height: 174px; }
+.tv-frame { position: absolute; left: 0; top: 0; width: 250px; height: 174px; max-width: none; pointer-events: none; filter: drop-shadow(0 10px 16px rgba(27,26,30,.3)); }
+.tv-screen { position: absolute; left: 18px; top: 14px; width: 168px; height: 126px; border-radius: 16px / 20px; overflow: hidden; background: #0C0C0D; }
+.tv-screen video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tv-screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.16) 0 1px, transparent 1px 3px), radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.45)); pointer-events: none; }
 .tv-play { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%; display: grid; place-items: center; background: #FF8AC4; color: #0B0B0C; font-size: 15px; padding-left: 3px; box-sizing: border-box; z-index: 1; transition: transform .2s; }
 .tv:hover .tv-play { transform: scale(1.15); }
-.tv-knobs { width: 30px; display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
-.tv-knobs i { display: block; width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #77767E, #2A2930); box-shadow: 0 1px 2px rgba(0,0,0,.4); }
 .hire { position: fixed; inset: 0; z-index: 25; display: grid; place-items: center; background: rgba(27,26,30,.72);
   padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); overflow: auto; }
 .hire-card { position: relative; width: min(100%, 560px); box-sizing: border-box; padding: 28px 28px 22px; border-radius: 14px; background: var(--panel); color: var(--ink); box-shadow: 0 20px 50px rgba(0,0,0,.35); }
@@ -524,8 +519,8 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     </button>
     <button class="abs cluster tv" type="button" data-cat="video" style="left:1480px; top:860px;" aria-label="Open Video Production: CETS and Partners DAO films">
       <span class="cluster-title" style="left:-30px;">VIDEO PRODUCTION</span>
-      <span class="tv-ant" aria-hidden="true"></span>
-      <span class="tv-body"><span class="tv-screen"><img src="work/pdao/vid/v3.jpg" alt="" draggable="false"><span class="tv-play" aria-hidden="true">&#9654;</span></span><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span></span>
+      <span class="tv-screen"><video src="work/pdao/vid/v4.mp4" poster="work/pdao/vid/v4.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video><span class="tv-play" aria-hidden="true">&#9654;</span></span>
+      <img class="tv-frame" src="work/tv.webp" alt="" width="250" height="174" draggable="false">
     </button>
   </div>
 
@@ -1355,6 +1350,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
       { q: "When do you need it?", key: "Timeline", opts: [["Within 2 weeks"], ["Within a month"], ["In 1 to 3 months"], ["I'm flexible"]] },
       { q: "What's the budget?", key: "Budget", opts: [["Under $250", "Under ₹20,000"], ["$250 to $1,000", "₹20,000 to ₹85,000"], ["$1,000 to $5,000", "₹85,000 to ₹4,20,000"], ["$5,000+", "₹4,20,000+"], ["Not sure yet"]] }]
   };
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) document.querySelectorAll(".tv-screen video").forEach(v => { v.removeAttribute("autoplay"); v.pause(); });
   const hire = document.getElementById("hire"), hireBtn = document.getElementById("hireBtn");
   const hQ = document.getElementById("hireQ"), hOpts = document.getElementById("hireOpts"), hStep = document.getElementById("hireStep"), hBar = document.getElementById("hireBar");
   const hDone = document.getElementById("hireDone"), hBack = document.getElementById("hireBack"), hSum = document.getElementById("hireSum");
