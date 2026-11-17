@@ -353,6 +353,63 @@ svg.draw path.guide { stroke: none; }
 .pd-divider { width: 0; border-left: 3px dashed var(--muted); opacity: .35; }
 .pd-stack { transform-origin: 0 0; }
 .pd-stack .stack-label { font-size: 26px; }
+.shop-sign { width: 460px; transform: rotate(var(--r)); transform-origin: 50% 0; pointer-events: none; }
+.shop-string { display: block; width: 300px; height: 90px; margin: 0 auto -6px; overflow: visible; }
+.shop-string path { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; }
+.shop-string circle { fill: var(--ink); }
+.shop-board { position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 20px 30px; box-sizing: border-box; border: 12px solid #3A2A22; border-radius: 6px;
+  background: #C8A57A radial-gradient(rgba(90,60,30,.25) 1px, transparent 1.5px) 0 0 / 6px 6px; box-shadow: inset 0 0 0 2px #1B1A1E, inset 0 3px 8px rgba(0,0,0,.35), 0 14px 26px rgba(27,26,30,.25); }
+.shop-word { font: 400 170px/.85 var(--display); color: var(--ink); letter-spacing: .02em; }
+.shop-soon { margin-top: 6px; padding: 2px 16px; font: 700 54px/1.05 var(--hand); color: var(--red); background: var(--note-yellow); transform: rotate(-4deg); box-shadow: 0 3px 8px rgba(27,26,30,.18); }
+.hire-btn { width: 500px; height: 260px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; transform: rotate(-6deg); transition: transform .2s cubic-bezier(.2,.8,.2,1); }
+.hire-btn svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hire-btn path { fill: none; stroke: var(--red); stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+.hire-btn span { position: relative; font: 700 136px/1 var(--hand); color: var(--red); white-space: nowrap; }
+.hire-btn:hover { transform: rotate(-3deg) scale(1.05); }
+.hire-btn:focus-visible { outline: 3px solid var(--red); outline-offset: 8px; border-radius: 40px; }
+.tv { width: 250px; height: 210px; }
+.tv-ant { position: absolute; left: 92px; top: 0; width: 66px; height: 34px; }
+.tv-ant::before, .tv-ant::after { content: ""; position: absolute; bottom: 0; width: 4px; height: 40px; border-radius: 2px; background: #3A3940; transform-origin: bottom center; }
+.tv-ant::before { left: 30px; transform: rotate(-32deg); } .tv-ant::after { left: 32px; transform: rotate(30deg); }
+.tv-body { position: absolute; left: 0; top: 30px; width: 250px; height: 180px; box-sizing: border-box; display: flex; gap: 12px; padding: 14px; border-radius: 20px; background: linear-gradient(160deg, #3A3940, #222127); box-shadow: inset 0 2px 0 rgba(255,255,255,.12), 0 10px 22px rgba(27,26,30,.3); }
+.tv-screen { position: relative; flex: 1; border-radius: 18px / 24px; overflow: hidden; background: #0C0C0D; box-shadow: inset 0 0 0 3px #111, inset 0 0 18px rgba(0,0,0,.8); }
+.tv-screen img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; opacity: .92; transition: opacity .2s; }
+.tv-screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(rgba(0,0,0,.18) 0 1px, transparent 1px 3px); pointer-events: none; }
+.tv-play { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%; display: grid; place-items: center; background: #FF8AC4; color: #0B0B0C; font-size: 15px; padding-left: 3px; box-sizing: border-box; z-index: 1; transition: transform .2s; }
+.tv:hover .tv-play { transform: scale(1.15); }
+.tv-knobs { width: 30px; display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
+.tv-knobs i { display: block; width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #77767E, #2A2930); box-shadow: 0 1px 2px rgba(0,0,0,.4); }
+.hire { position: fixed; inset: 0; z-index: 25; display: grid; place-items: center; background: rgba(27,26,30,.72);
+  padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); overflow: auto; }
+.hire-card { position: relative; width: min(100%, 560px); box-sizing: border-box; padding: 28px 28px 22px; border-radius: 14px; background: var(--panel); color: var(--ink); box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.hire-top { display: flex; align-items: center; gap: 14px; margin: 0 70px 18px 0; }
+.hire-step { font: 700 12px/1 var(--mono); letter-spacing: .12em; color: var(--muted); white-space: nowrap; }
+.hire-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--paper); overflow: hidden; }
+.hire-bar i { display: block; height: 100%; width: 0; background: var(--red); transition: width .3s ease; }
+.hire-close { position: absolute; top: 18px; right: 18px; font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px; cursor: pointer; }
+#hireQ:focus { outline: none; }
+.hire-card h2 { margin: 0 0 18px; font: 400 46px/1 var(--display); letter-spacing: .01em; text-wrap: balance; }
+.hire-opts { display: grid; gap: 10px; }
+.hire-opts button { display: flex; flex-direction: column; gap: 3px; width: 100%; text-align: left; padding: 14px 16px; border: 2px solid var(--ink); border-radius: 10px; background: var(--panel); color: var(--ink); cursor: pointer; font: 700 17px/1.2 var(--note); transition: background .15s, color .15s, transform .15s; }
+.hire-opts button small { font: 500 13px/1.3 var(--note); color: var(--muted); }
+.hire-opts button:hover, .hire-opts button:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+.hire-opts button:hover small, .hire-opts button:focus-visible small { color: var(--line); }
+.hire-opts button:active { transform: scale(.98); }
+.hire-back { margin-top: 16px; padding: 6px 0; border: 0; background: none; color: var(--muted); font: 500 14px var(--note); cursor: pointer; }
+.hire-back:hover { color: var(--ink); }
+.hire-sum { margin: 0 0 18px; padding: 14px 16px; border-radius: 10px; background: var(--paper); display: grid; gap: 6px; font: 500 15px/1.35 var(--note); }
+.hire-sum dt { font: 700 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.hire-sum dd { margin: 0; }
+.hire-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hire-send { display: inline-flex; align-items: center; padding: 14px 20px; border-radius: 10px; background: var(--red); color: #FFFFFF; font: 700 16px var(--note); text-decoration: none; }
+.hire-send:hover { background: var(--ink); }
+.hire-copy { padding: 14px 18px; border: 2px solid var(--ink); border-radius: 10px; background: var(--panel); color: var(--ink); font: 700 16px var(--note); cursor: pointer; }
+.hire-copy:hover { background: var(--ink); color: var(--paper); }
+.hire-note { margin: 14px 0 0; font: 500 13px/1.45 var(--note); color: var(--muted); }
+.hire-note b { color: var(--ink); user-select: all; }
+.hire-send:focus-visible, .hire-copy:focus-visible, .hire-close:focus-visible, .hire-back:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+@media (max-width: 480px) { .hire-card { padding: 22px 18px 16px; } .hire-card h2 { font-size: 36px; } }
+@media (prefers-reduced-motion: reduce) { .hire-btn, .hire-bar i, .tv-play { transition: none; } }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
 .nojs { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--paper); color: var(--ink); }
@@ -457,10 +514,23 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
       </span>
     </button>
 
+    <div class="abs shop-sign" style="left:-1600px; top:-300px; --r:-5deg;" role="img" aria-label="Shop coming soon">
+      <svg class="shop-string" viewBox="0 0 300 90" aria-hidden="true"><path d="M30 88 L150 8 L270 88"/><circle cx="150" cy="8" r="7"/></svg>
+      <div class="shop-board"><span class="shop-word">SHOP</span><span class="shop-soon">coming soon</span></div>
+    </div>
+    <button class="abs hire-btn" id="hireBtn" type="button" style="left:-250px; top:470px;" aria-haspopup="dialog" aria-label="Hire me: answer a few quick questions">
+      <svg viewBox="0 0 500 260" aria-hidden="true"><path d="M70 150 C 40 70, 190 22, 300 30 C 420 38, 480 100, 452 160 C 424 222, 280 246, 170 230 C 80 218, 30 180, 58 128 C 74 96, 120 70, 180 58"/></svg>
+      <span>hire me</span>
+    </button>
+    <button class="abs cluster tv" type="button" data-cat="video" style="left:1480px; top:860px;" aria-label="Open Video Production: CETS and Partners DAO films">
+      <span class="cluster-title" style="left:-30px;">VIDEO PRODUCTION</span>
+      <span class="tv-ant" aria-hidden="true"></span>
+      <span class="tv-body"><span class="tv-screen"><img src="work/pdao/vid/v3.jpg" alt="" draggable="false"><span class="tv-play" aria-hidden="true">&#9654;</span></span><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span></span>
+    </button>
   </div>
 
   <div id="work" class="board" hidden>
-    <section class="abs part" style="left:-8935px; top:130px; width:8545px; height:5512px;" aria-label="Creative Direction"><h2 class="part-title" style="left:3879px;">CREATIVE DIRECTION</h2></section>
+    <section class="abs part" style="left:-8935px; top:130px; width:8545px; height:4940px;" aria-label="Creative Direction"><h2 class="part-title" style="left:3879px;">CREATIVE DIRECTION</h2></section>
     <section class="abs part" style="left:380px; top:130px; width:4410px; height:3740px;" aria-label="Artsy"><h2 class="part-title">ARTSY</h2></section>
     <section class="abs part" style="left:5180px; top:130px; width:2640px; height:3240px;" aria-label="Design"><h2 class="part-title">DESIGN</h2></section>
     <h3 class="abs zone-title" style="left:5240px; top:640px; font-size:48px;">SPUD X NOTICE</h3>
@@ -536,22 +606,8 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
       <svg class="doodle" style="left:1150px; top:470px; width:90px; height:60px;" viewBox="0 0 90 60" aria-hidden="true"><path d="M6 50 C 30 10, 60 6, 82 20 M72 10 L84 20 L70 28"/></svg>
       <svg class="doodle" style="left:2120px; top:416px; width:46px; height:46px;" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 4 L34 24 L54 28 L34 33 L30 56 L26 33 L6 28 L26 24 Z"/></svg>
     </section>
-    <h3 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:4760px;">VIDEO PRODUCTION</h3>
-    <p class="abs proj-desc" style="left:-4998px; top:4826px;">Drop films and social cuts made for the CETS merch releases.</p>
-    <p class="abs proj-role" style="left:-4998px; top:4858px;">Creative direction · Video production</p>
-    <div class="abs vid-wrap film" style="left:-5000px; top:4912px; width:959px; height:650px;">
-      <video src="work/video/313-film.mp4" poster="work/video/313-film.jpg" preload="none" playsinline aria-label="CETS video 1"></video>
-      <button class="vid-play" type="button" aria-label="Play CETS video 1"><span aria-hidden="true">&#9654;</span>PLAY</button>
-    </div>
-    <div class="abs vid-wrap film" style="left:-4001px; top:4912px; width:1156px; height:650px;">
-      <video src="work/merch/vid-0.mp4" poster="work/merch/vid-0.jpg" preload="none" playsinline aria-label="CETS video 2"></video>
-      <button class="vid-play" type="button" aria-label="Play CETS video 2"><span aria-hidden="true">&#9654;</span>PLAY</button>
-    </div>
-    <div class="abs vid-wrap film" style="left:-2805px; top:4912px; width:366px; height:650px;">
-      <video src="work/merch/vid-1.mp4" poster="work/merch/vid-1.jpg" preload="none" playsinline aria-label="CETS video 3"></video>
-      <button class="vid-play" type="button" aria-label="Play CETS video 3"><span aria-hidden="true">&#9654;</span>PLAY</button>
-    </div>
     <button class="abs proj-jump" type="button" data-jump="pd" style="left:-3940px; top:66px;">← Partners DAO</button>
+    <button class="abs proj-jump" type="button" data-jump="video" style="left:-3500px; top:66px;">Video Production →</button>
     <div class="abs pd-divider" style="left:-5135px; top:200px; height:5040px;" aria-hidden="true"></div>
     <div class="abs cd-role pd-role" id="pd" style="left:-8865px; top:240px; width:3600px;">
       <div><span class="cd-kicker">ROLE</span><h3>Creative Director · Partners DAO</h3><p>Every creative and every partnership: NFT launch, whitelists, raise campaign and merch.</p></div>
@@ -636,34 +692,51 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
       <span class="stack-card" style="--i:0;"><img data-src="work/pdao/safety-01-t.webp" alt="" draggable="false" decoding="async"></span>
       <span class="stack-label">+4 more <span class="stack-hint">tap to open</span></span>
     </button>
-    <h3 class="abs zone-title pd-title" style="left:-7005px; top:3183.744609915689px;">VIDEO</h3>
-    <p class="abs proj-desc" style="left:-7003px; top:3249.744609915689px;">Launch films and motion loops for the brand.</p>
-    <p class="abs proj-role" style="left:-7003px; top:3281.744609915689px;">Creative direction · Motion</p>
-    <div class="abs vid-wrap film pd-film" style="left:-7005px; top:3334px; width:564px; height:317px;">
+    <button class="abs proj-jump" type="button" data-jump="cd" style="left:-5515px; top:150px;">CETS →</button>
+    <section class="abs part" style="left:8210px; top:130px; width:3620px; height:2761px;" aria-label="Video Production"><h2 class="part-title">VIDEO PRODUCTION</h2></section>
+    <h3 class="abs zone-title pd-title" style="left:8280px; top:200px;">CETS</h3>
+    <p class="abs proj-desc" style="left:8282px; top:266px;">Drop films and social cuts for the CETS merch releases.</p>
+    <p class="abs proj-role" style="left:8282px; top:298px;">Creative direction · Video production</p>
+    <div class="abs vid-wrap film" style="left:8280px; top:350px; width:1327px; height:899px;">
+      <video src="work/video/313-film.mp4" poster="work/video/313-film.jpg" preload="none" playsinline aria-label="CETS video 1"></video>
+      <button class="vid-play" type="button" aria-label="Play CETS video 1"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
+    <div class="abs vid-wrap film" style="left:9631px; top:350px; width:1599px; height:899px;">
+      <video src="work/merch/vid-0.mp4" poster="work/merch/vid-0.jpg" preload="none" playsinline aria-label="CETS video 2"></video>
+      <button class="vid-play" type="button" aria-label="Play CETS video 2"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
+    <div class="abs vid-wrap film" style="left:11254px; top:350px; width:506px; height:899px;">
+      <video src="work/merch/vid-1.mp4" poster="work/merch/vid-1.jpg" preload="none" playsinline aria-label="CETS video 3"></video>
+      <button class="vid-play" type="button" aria-label="Play CETS video 3"><span aria-hidden="true">&#9654;</span>PLAY</button>
+    </div>
+    <h3 class="abs zone-title pd-title" style="left:8280px; top:1359px;">PARTNERS DAO</h3>
+    <p class="abs proj-desc" style="left:8282px; top:1425px;">Launch films and motion loops for the Partners DAO brand.</p>
+    <p class="abs proj-role" style="left:8282px; top:1457px;">Creative direction · Motion</p>
+    <div class="abs vid-wrap film" style="left:8280px; top:1509px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v3.mp4" poster="work/pdao/vid/v3.jpg" preload="none" playsinline aria-label="Partners DAO video 1"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 1"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <div class="abs vid-wrap film pd-film" style="left:-6417px; top:3334px; width:564px; height:317px;">
+    <div class="abs vid-wrap film" style="left:9448px; top:1509px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v1.mp4" poster="work/pdao/vid/v1.jpg" preload="none" playsinline aria-label="Partners DAO video 2"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 2"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <div class="abs vid-wrap film pd-film" style="left:-5829px; top:3334px; width:564px; height:317px;">
+    <div class="abs vid-wrap film" style="left:10616px; top:1509px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v6.mp4" poster="work/pdao/vid/v6.jpg" preload="none" playsinline aria-label="Partners DAO video 3"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 3"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <div class="abs vid-wrap film pd-film" style="left:-7005px; top:3675px; width:564px; height:317px;">
+    <div class="abs vid-wrap film" style="left:8280px; top:2177px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v2.mp4" poster="work/pdao/vid/v2.jpg" preload="none" playsinline aria-label="Partners DAO video 4"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 4"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <div class="abs vid-wrap film pd-film" style="left:-6417px; top:3675px; width:564px; height:317px;">
+    <div class="abs vid-wrap film" style="left:9448px; top:2177px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v5.mp4" poster="work/pdao/vid/v5.jpg" preload="none" playsinline aria-label="Partners DAO video 5"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 5"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <div class="abs vid-wrap film pd-film" style="left:-5829px; top:3675px; width:564px; height:317px;">
+    <div class="abs vid-wrap film" style="left:10616px; top:2177px; width:1144px; height:644px;">
       <video src="work/pdao/vid/v4.mp4" poster="work/pdao/vid/v4.jpg" preload="none" playsinline aria-label="Partners DAO video 6"></video>
       <button class="vid-play" type="button" aria-label="Play Partners DAO video 6"><span aria-hidden="true">&#9654;</span>PLAY</button>
     </div>
-    <button class="abs proj-jump" type="button" data-jump="cd" style="left:-5515px; top:150px;">CETS →</button>
+    <button class="abs proj-jump" type="button" data-jump="cd" style="left:11400px; top:62px;">Creative Direction ←</button>
     <p class="abs sublabel" style="left:6524px; top:886px; white-space:nowrap;">CET RUNNER</p>
     <div class="abs vid-wrap" style="left:6520px; top:930px; width:1000px; height:294px;">
       <video id="cetVid" src="work/dino/cet-runner.mp4" poster="work/dino/poster.jpg" preload="none" playsinline aria-label="Gameplay of Cet Runner, a pixel-art endless runner Spud made"></video>
@@ -765,10 +838,30 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   <button class="ctl homeonly go-cat" data-cat="artsy" type="button">Artsy</button>
   <button class="ctl homeonly go-cat" data-cat="design" type="button">Design</button>
   <button class="ctl homeonly go-cat" data-cat="cd" type="button">Creative</button>
+  <button class="ctl homeonly go-cat" data-cat="video" type="button">Video</button>
   <button class="ctl workonly" id="toHome" type="button" hidden>&larr; Home</button>
   <button class="ctl workonly cat-btn" data-jump="cd" type="button" hidden>Creative</button>
   <button class="ctl workonly cat-btn" data-jump="artsy" type="button" hidden>Artsy</button>
   <button class="ctl workonly cat-btn" data-jump="design" type="button" hidden>Design</button>
+  <button class="ctl workonly cat-btn" data-jump="video" type="button" hidden>Video</button>
+</div>
+
+<div class="hire" id="hire" hidden role="dialog" aria-modal="true" aria-labelledby="hireQ">
+  <div class="hire-card">
+    <button class="hire-close" id="hireClose" type="button">Close</button>
+    <div class="hire-top"><span class="hire-step" id="hireStep">1 / 5</span><div class="hire-bar"><i id="hireBar"></i></div></div>
+    <h2 id="hireQ" tabindex="-1">What brings you here?</h2>
+    <div class="hire-opts" id="hireOpts"></div>
+    <div id="hireDone" hidden>
+      <dl class="hire-sum" id="hireSum"></dl>
+      <div class="hire-actions">
+        <a class="hire-send" id="hireSend" href="mailto:theartistspud@gmail.com">Send it by email</a>
+        <button class="hire-copy" id="hireCopy" type="button">Copy answers</button>
+      </div>
+      <p class="hire-note" id="hireNote">Your answers drop into a ready-made email. Add anything else, then hit send. If no email app opens, copy your answers and send them to <b>theartistspud@gmail.com</b>.</p>
+    </div>
+    <button class="hire-back" id="hireBack" type="button" hidden>&larr; Back</button>
+  </div>
 </div>
 
 <div class="gallery" id="gallery-pd-launch" hidden role="dialog" aria-modal="true" aria-label="Partners DAO: Nft Launch &amp; Raffles">
@@ -1068,7 +1161,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   const MIN = 0.15, MAX = 6;
   let s = { x: 0, y: 0, k: 1 };
 
-  const HOME_BOX = { x0: -1020, x1: 1475, y0: -360, y1: 1246 };
+  const HOME_BOX = { x0: -1600, x1: 1960, y0: -360, y1: 1260 };
   const minK = () => mode !== "home" ? MIN : Math.min(vp.clientWidth / (HOME_BOX.x1 - HOME_BOX.x0 + 400), vp.clientHeight / (HOME_BOX.y1 - HOME_BOX.y0 + 400));
   function clampHome() {
     if (mode !== "home") return;
@@ -1122,7 +1215,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     s.k = k; s.x = cx - wx * k; s.y = cy - wy * k; apply();
   }
   const HUB = { x0: -470, x1: 470, y0: -390, y1: 380 };
-  const CATS = { pd: { x0: -8935, x1: -5205, y0: 110, y1: 1900 }, cd: { x0: -5100, x1: -1900, y0: -60, y1: 1780 }, artsy: { x0: 330, x1: 2450, y0: -60, y1: 1300 }, design: { x0: 5130, x1: 7870, y0: -60, y1: 1500 } };
+  const CATS = { pd: { x0: -8935, x1: -5205, y0: 110, y1: 1900 }, cd: { x0: -5100, x1: -1900, y0: -60, y1: 1780 }, artsy: { x0: 330, x1: 2450, y0: -60, y1: 1300 }, design: { x0: 5130, x1: 7870, y0: -60, y1: 1500 }, video: { x0: 8160, x1: 11880, y0: -60, y1: 1340 } };
   const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function fitTarget(B, maxK) {
     const w = vp.clientWidth, h = vp.clientHeight;
@@ -1190,7 +1283,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   let last = null, pinch = null, moved = 0, downTarget = null;
   vp.addEventListener("pointerdown", e => {
     if (e.button !== 0 && e.pointerType === "mouse") return;
-    if (e.target.closest && e.target.closest(".sticky a, .sticky .copy, .ipod-screen, .ipod-wheel, .flow-pop.open, .vid-wrap, .ui-visit, .proj-jump")) return;
+    if (e.target.closest && e.target.closest(".sticky a, .sticky .copy, .ipod-screen, .ipod-wheel, .flow-pop.open, .vid-wrap, .ui-visit, .proj-jump, .hire-btn")) return;
     vp.setPointerCapture(e.pointerId);
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pts.size === 1) { last = { x: e.clientX, y: e.clientY }; moved = 0; downTarget = e.target; }
@@ -1247,6 +1340,69 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   document.querySelectorAll(".go-cat").forEach(b => b.onclick = () => openCat(document.querySelector(`.cluster[data-cat="${b.dataset.cat}"]`)));
 
   document.querySelectorAll(".proj-jump").forEach(b => b.onclick = () => jump(b.dataset.jump, true));
+  const HIRE = {
+    start: { q: "What brings you here?", key: "Looking for", opts: [
+      ["Hiring for a role", "Full-time, contract or part-time", "role"],
+      ["A freelance project", "Art, design or creative direction for a project", "free"]] },
+    role: [
+      { q: "What's the role?", key: "Role", opts: [["Creative Director"], ["Art Director"], ["Illustrator / Character Artist"], ["Concept / Game Artist"], ["Something else"]] },
+      { q: "What kind of contract?", key: "Type", opts: [["Full-time"], ["Contract"], ["Part-time"]] },
+      { q: "Where's the work?", key: "Location", opts: [["Remote"], ["Hybrid"], ["On-site"]] },
+      { q: "When would it start?", key: "Start", opts: [["As soon as possible"], ["Within a month"], ["In 1 to 3 months"], ["Just exploring for now"]] }],
+    free: [
+      { q: "What do you need?", key: "Need", opts: [["Illustration / key art"], ["Character design"], ["NFT / collection art"], ["Album or cover art"], ["Brand & creative direction"], ["Merch design"], ["Video / motion"]] },
+      { q: "How big is it?", key: "Size", opts: [["One piece"], ["A small set", "2 to 10 pieces"], ["A full collection or campaign"], ["Ongoing work"]] },
+      { q: "When do you need it?", key: "Timeline", opts: [["Within 2 weeks"], ["Within a month"], ["In 1 to 3 months"], ["I'm flexible"]] },
+      { q: "What's the budget?", key: "Budget", opts: [["Under $250", "Under ₹20,000"], ["$250 to $1,000", "₹20,000 to ₹85,000"], ["$1,000 to $5,000", "₹85,000 to ₹4,20,000"], ["$5,000+", "₹4,20,000+"], ["Not sure yet"]] }]
+  };
+  const hire = document.getElementById("hire"), hireBtn = document.getElementById("hireBtn");
+  const hQ = document.getElementById("hireQ"), hOpts = document.getElementById("hireOpts"), hStep = document.getElementById("hireStep"), hBar = document.getElementById("hireBar");
+  const hDone = document.getElementById("hireDone"), hBack = document.getElementById("hireBack"), hSum = document.getElementById("hireSum");
+  let hPath = null, hAns = [];
+  const hList = () => [HIRE.start].concat(hPath ? HIRE[hPath] : []);
+  function hRender() {
+    const list = hList(), i = hAns.length, total = hPath ? list.length : 5;
+    hBack.hidden = i === 0;
+    if (hPath && i >= list.length) { hFinish(); return; }
+    const step = list[i];
+    hDone.hidden = true; hOpts.hidden = false;
+    hStep.textContent = `${i + 1} / ${total}`; hBar.style.width = `${(i / total) * 100}%`;
+    hQ.textContent = step.q;
+    hOpts.innerHTML = "";
+    step.opts.forEach(([label, sub, path]) => {
+      const b = document.createElement("button"); b.type = "button";
+      b.innerHTML = `<span></span>${sub ? "<small></small>" : ""}`;
+      b.firstChild.textContent = label; if (sub) b.lastChild.textContent = sub;
+      b.onclick = () => { if (i === 0) hPath = path; hAns.push([step.key, sub ? `${label} (${sub})` : label]); hRender(); };
+      hOpts.appendChild(b);
+    });
+    hOpts.firstChild.focus();
+  }
+  function hFinish() {
+    hOpts.hidden = true; hDone.hidden = false;
+    hStep.textContent = "Done"; hBar.style.width = "100%"; hQ.textContent = "Nice. Send it over.";
+    hSum.innerHTML = "";
+    hAns.forEach(([k, v]) => { const dt = document.createElement("dt"), dd = document.createElement("dd"); dt.textContent = k; dd.textContent = v; hSum.append(dt, dd); });
+    const lines = hAns.map(([k, v]) => `${k}: ${v}`).join("\n");
+    const subject = hPath === "role" ? `Role for Spud: ${hAns[1][1]}` : `Project for Spud: ${hAns[1][1]}`;
+    const body = `Hi Spud,\n\n${lines}\n\nA bit more about it:\n\n\nName / company:\n`;
+    document.getElementById("hireSend").href = `mailto:theartistspud@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    hire.dataset.text = `${subject}\n\n${lines}`;
+    hQ.focus();
+  }
+  function hOpen() { hPath = null; hAns = []; hire.hidden = false; hRender(); }
+  function hClose() { hire.hidden = true; hireBtn.focus(); }
+  hireBtn.addEventListener("click", hOpen);
+  document.getElementById("hireClose").onclick = hClose;
+  hBack.onclick = () => { hAns.pop(); if (hAns.length === 0) hPath = null; hRender(); };
+  hire.addEventListener("click", e => { if (e.target === hire) hClose(); });
+  hire.addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); hClose(); } });
+  document.getElementById("hireCopy").onclick = async e => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.writeText(hire.dataset.text); btn.textContent = "Copied ✓"; }
+    catch { const r = document.createRange(); r.selectNodeContents(hSum); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); btn.textContent = "Selected: copy it"; }
+    setTimeout(() => btn.textContent = "Copy answers", 2200);
+  };
   const box = document.getElementById("lightbox");
   const resumeBtn = document.getElementById("resumeBtn");
   let opener = null;
