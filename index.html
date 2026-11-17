@@ -1068,7 +1068,17 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   const MIN = 0.15, MAX = 6;
   let s = { x: 0, y: 0, k: 1 };
 
+  const HOME_BOX = { x0: -1020, x1: 1475, y0: -360, y1: 1246 };
+  const minK = () => mode !== "home" ? MIN : Math.min(vp.clientWidth / (HOME_BOX.x1 - HOME_BOX.x0 + 400), vp.clientHeight / (HOME_BOX.y1 - HOME_BOX.y0 + 400));
+  function clampHome() {
+    if (mode !== "home") return;
+    const P = 200, x0 = HOME_BOX.x0 - P, x1 = HOME_BOX.x1 + P, y0 = HOME_BOX.y0 - P, y1 = HOME_BOX.y1 + P;
+    const W = vp.clientWidth, H = vp.clientHeight, k = s.k;
+    s.x = (x1 - x0) * k <= W ? W / 2 - (x0 + x1) / 2 * k : Math.min(-x0 * k, Math.max(W - x1 * k, s.x));
+    s.y = (y1 - y0) * k <= H ? H / 2 - (y0 + y1) / 2 * k : Math.min(-y0 * k, Math.max(H - y1 * k, s.y));
+  }
   function apply() {
+    clampHome();
     world.style.transform = `translate(${s.x}px, ${s.y}px) scale(${s.k})`;
     const g = 24 * s.k;
     vp.style.backgroundSize = `${g}px ${g}px`;
@@ -1106,8 +1116,6 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     for (let i = 0; i < 4; i++) next();
   }
   addEventListener("load", () => setTimeout(prefetchWork, 1200));
-  const HOME_BOX = { x0: -1020, x1: 1475, y0: -360, y1: 1246 };
-  const minK = () => mode !== "home" ? MIN : Math.min(vp.clientWidth / (HOME_BOX.x1 - HOME_BOX.x0 + 400), vp.clientHeight / (HOME_BOX.y1 - HOME_BOX.y0 + 400));
   function zoomAt(cx, cy, k) {
     k = Math.min(MAX, Math.max(minK(), k));
     const wx = (cx - s.x) / s.k, wy = (cy - s.y) / s.k;
