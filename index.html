@@ -1106,8 +1106,10 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     for (let i = 0; i < 4; i++) next();
   }
   addEventListener("load", () => setTimeout(prefetchWork, 1200));
+  const HOME_BOX = { x0: -1020, x1: 1475, y0: -360, y1: 1246 };
+  const minK = () => mode !== "home" ? MIN : Math.min(vp.clientWidth / (HOME_BOX.x1 - HOME_BOX.x0 + 400), vp.clientHeight / (HOME_BOX.y1 - HOME_BOX.y0 + 400));
   function zoomAt(cx, cy, k) {
-    k = Math.min(MAX, Math.max(MIN, k));
+    k = Math.min(MAX, Math.max(minK(), k));
     const wx = (cx - s.x) / s.k, wy = (cy - s.y) / s.k;
     s.k = k; s.x = cx - wx * k; s.y = cy - wy * k; apply();
   }
