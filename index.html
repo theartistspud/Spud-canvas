@@ -405,6 +405,19 @@ svg.draw path.guide { stroke: none; }
 .hire-send:focus-visible, .hire-copy:focus-visible, .hire-close:focus-visible, .hire-back:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 @media (max-width: 480px) { .hire-card { padding: 22px 18px 16px; } .hire-card h2 { font-size: 36px; } }
 @media (prefers-reduced-motion: reduce) { .hire-btn, .hire-bar i, .tv-play { transition: none; } }
+.hire-form { display: grid; gap: 8px; }
+.hire-form label { font: 700 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.hire-form label span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.hire-form input, .hire-form textarea { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 10px; background: var(--panel); color: var(--ink); font: 500 16px/1.35 var(--note); resize: vertical; }
+.hire-form input:focus-visible, .hire-form textarea:focus-visible { outline: 3px solid var(--red); outline-offset: 1px; }
+.hire-form .hire-actions { margin-top: 8px; }
+.hire-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.hire-err { margin: 0; font: 500 14px/1.35 var(--note); color: var(--red); }
+.hire-send:disabled { opacity: .6; cursor: wait; }
+button.hire-send { border: 0; cursor: pointer; }
+.hire-ok p { margin: 0 0 6px; font: 500 16px/1.45 var(--note); }
+.hire-ok .hire-ok-big { font: 700 44px/1 var(--hand); color: var(--red); margin-bottom: 10px; }
+.hire-fallback .hire-note { margin: 0 0 14px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
 .nojs { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--paper); color: var(--ink); }
@@ -865,11 +878,23 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     <div class="hire-opts" id="hireOpts"></div>
     <div id="hireDone" hidden>
       <dl class="hire-sum" id="hireSum"></dl>
-      <div class="hire-actions">
-        <a class="hire-send" id="hireSend" href="mailto:theartistspud@gmail.com">Send it by email</a>
-        <button class="hire-copy" id="hireCopy" type="button">Copy answers</button>
+      <form class="hire-form" id="hireForm" novalidate>
+        <label for="hireEmail">Your email, so I can reply</label>
+        <input id="hireEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" required>
+        <label for="hireMsg">Anything else? <span>(optional)</span></label>
+        <textarea id="hireMsg" name="message" rows="3" placeholder="Links, references, a bit about the project or role"></textarea>
+        <input class="hire-hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="hire-err" id="hireErr" role="alert" hidden></p>
+        <div class="hire-actions"><button class="hire-send" id="hireSend" type="submit">Send to Spud</button></div>
+      </form>
+      <div class="hire-ok" id="hireOk" hidden>
+        <p class="hire-ok-big">Sent ✓</p>
+        <p>Thanks! Your answers are in my inbox. I'll reply to <b id="hireOkMail"></b> soon.</p>
       </div>
-      <p class="hire-note" id="hireNote">Your answers drop into a ready-made email. Add anything else, then hit send. If no email app opens, copy your answers and send them to <b>theartistspud@gmail.com</b>.</p>
+      <div class="hire-fallback" id="hireFallback" hidden>
+        <p class="hire-note">That didn't go through. Email your answers instead, or copy them and send to <b>theartistspud@gmail.com</b>.</p>
+        <div class="hire-actions"><a class="hire-send" id="hireMailto" href="mailto:theartistspud@gmail.com">Open in email</a><button class="hire-copy" id="hireCopy" type="button">Copy answers</button></div>
+      </div>
     </div>
     <button class="hire-back" id="hireBack" type="button" hidden>&larr; Back</button>
   </div>
@@ -1398,11 +1423,37 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     const lines = hAns.map(([k, v]) => `${k}: ${v}`).join("\n");
     const subject = hPath === "role" ? `Role for Spud: ${hAns[1][1]}` : `Project for Spud: ${hAns[1][1]}`;
     const body = `Hi Spud,\n\n${lines}\n\nA bit more about it:\n\n\nName / company:\n`;
-    document.getElementById("hireSend").href = `mailto:theartistspud@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    hire.dataset.text = `${subject}\n\n${lines}`;
-    hQ.focus();
+    document.getElementById("hireMailto").href = `mailto:theartistspud@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    hire.dataset.text = `${subject}\n\n${lines}`; hire.dataset.subject = subject;
+    hForm.hidden = false; hOk.hidden = true; hFall.hidden = true; hErr.hidden = true; hSend.disabled = false; hSend.textContent = "Send to Spud";
+    hQ.textContent = "Last step: where can I reach you?";
+    hEmail.focus();
   }
-  function hOpen() { hPath = null; hAns = []; hire.hidden = false; hRender(); }
+  const hForm = document.getElementById("hireForm"), hEmail = document.getElementById("hireEmail"), hMsg = document.getElementById("hireMsg"), hErr = document.getElementById("hireErr");
+  const hSend = document.getElementById("hireSend"), hOk = document.getElementById("hireOk"), hFall = document.getElementById("hireFallback");
+  hForm.addEventListener("submit", async e => {
+    e.preventDefault();
+    const email = hEmail.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { hErr.textContent = "That email doesn't look right. Check it and try again."; hErr.hidden = false; hEmail.focus(); return; }
+    hErr.hidden = true;
+    if (hForm.elements._honey.value) return;
+    hSend.disabled = true; hSend.textContent = "Sending…";
+    const data = { _subject: hire.dataset.subject, _template: "table", _captcha: "false", email };
+    hAns.forEach(([k, v]) => data[k] = v);
+    if (hMsg.value.trim()) data["More info"] = hMsg.value.trim();
+    try {
+      const r = await fetch("https://formsubmit.co/ajax/theartistspud@gmail.com", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || String(j.success) !== "true") throw new Error(j.message || r.status);
+      hForm.hidden = true; hOk.hidden = false; document.getElementById("hireOkMail").textContent = email;
+      hQ.textContent = "Done. Talk soon!"; hBack.hidden = true;
+    } catch (err) {
+      hForm.hidden = true; hFall.hidden = false; hQ.textContent = "Hmm, that didn't send.";
+      const extra = hMsg.value.trim() ? `\n\nMore info: ${hMsg.value.trim()}` : "";
+      document.getElementById("hireMailto").href = `mailto:theartistspud@gmail.com?subject=${encodeURIComponent(hire.dataset.subject)}&body=${encodeURIComponent(hire.dataset.text + extra + "\n\nReply to: " + email)}`;
+    }
+  });
+  function hOpen() { hPath = null; hAns = []; hEmail.value = ""; hMsg.value = ""; hire.hidden = false; hRender(); }
   function hClose() { hire.hidden = true; hireBtn.focus(); }
   hireBtn.addEventListener("click", hOpen);
   document.getElementById("hireClose").onclick = hClose;
