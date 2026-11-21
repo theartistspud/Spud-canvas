@@ -418,6 +418,33 @@ button.hire-send { border: 0; cursor: pointer; }
 .hire-ok p { margin: 0 0 6px; font: 500 16px/1.45 var(--note); }
 .hire-ok .hire-ok-big { font: 700 44px/1 var(--hand); color: var(--red); margin-bottom: 10px; }
 .hire-fallback .hire-note { margin: 0 0 14px; }
+.cs-open { padding: 12px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--ink); color: var(--paper); font: 700 20px/1 var(--mono); letter-spacing: .04em; white-space: nowrap; cursor: pointer; }
+.cs-open:hover { background: var(--red); border-color: var(--red); }
+.cs-open:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.cs { position: fixed; inset: 0; z-index: 18; overflow: auto; background: var(--paper); overscroll-behavior: contain;
+  padding: calc(72px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(56px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.cs-close { position: fixed; z-index: 19; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px)); font: 500 14px var(--note); background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 10px rgba(27,26,30,.08); }
+.cs-close:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+.cs-body { max-width: 920px; margin: 0 auto; color: var(--ink); }
+.cs-kicker { margin: 0 0 10px; font: 700 13px/1 var(--mono); letter-spacing: .16em; color: var(--red); }
+.cs-body h2 { margin: 0 0 24px; font: 400 clamp(52px, 9vw, 104px)/.92 "CETS Neue", var(--display); text-wrap: balance; }
+.cs-body h3 { margin: 44px 0 12px; font: 400 34px/1 var(--display); letter-spacing: .02em; }
+.cs-body p, .cs-body li { font: 500 18px/1.55 var(--note); max-width: 64ch; }
+.cs-body p { margin: 0; }
+.cs-body ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 0; }
+.cs-facts div { padding: 14px 16px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+.cs-facts dt { font: 700 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.cs-facts dd { margin: 0; font: 600 16px/1.35 var(--note); }
+.cs-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.cs-fig { margin: 0; border-radius: 10px; overflow: hidden; background: #0C0C0D; min-width: 0; }
+.cs-fig.wide { grid-column: 1 / -1; }
+.cs-fig img { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: cover; }
+.cs-vid { position: relative; margin-top: 12px; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 944 / 640; max-width: 100%; }
+.cs-vid video { display: block; width: 100%; height: 100%; }
+.cs-wins { list-style: none; padding: 0 !important; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px !important; }
+.cs-wins li { max-width: none; padding: 18px; border-radius: 12px; background: var(--ink); color: var(--paper); font-size: 16px; }
+.cs-wins b { display: block; margin-bottom: 4px; font: 400 40px/1 var(--display); color: #E2FF1E; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
 .nojs { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--paper); color: var(--ink); }
@@ -568,8 +595,10 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     <p class="abs proj-desc" style="left:-2588px; top:1836px;">A living roadmap system that turned upcoming drops and events into collectible cards.</p>
     <p class="abs proj-role" style="left:-2588px; top:1868px;">UX/UI · System design</p>
     <p class="abs sublabel" style="left:-1656px; top:1882px;">CETS DRIP · DROP PAGE</p>
-    <h3 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:2622px;">FOMO × CETS: THE $500K LAUNCH</h3>
-    <p class="abs proj-desc" style="left:-4998px; top:2688px;">A launch campaign built on the brand line “the lifestyle for the real and unapologetic.”</p>
+    <button class="abs cs-open" type="button" data-cs="cs-launch" style="left:-5000px; top:2560px;">Case study: launching CETS to $500K →</button>
+    <button class="abs cs-open" type="button" data-cs="cs-merch" style="left:-5000px; top:3478px;">Case study: every drop sold out →</button>
+    <h3 class="abs zone-title proj-title mk mk-camp" style="left:-5000px; top:2622px;">FEATURED IN FOMO</h3>
+    <p class="abs proj-desc" style="left:-4998px; top:2688px;">The campaign that got CETS featured in FOMO, built on the line “the lifestyle for the real and unapologetic.”</p>
     <p class="abs proj-role" style="left:-4998px; top:2720px;">Concept · Art direction · Design</p>
     <h3 class="abs zone-title proj-title mk mk-world" style="left:-3730px; top:2622px;">A WORLD BIG ENOUGH TO PITCH TO ADULT SWIM</h3>
     <p class="abs proj-desc" style="left:-3728px; top:2688px;">Built the Cetsworld universe: story, characters, Ceticatures and the four pillars the brand stands on.</p>
@@ -868,6 +897,40 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   <button class="ctl workonly cat-btn" data-jump="artsy" type="button" hidden>Artsy</button>
   <button class="ctl workonly cat-btn" data-jump="design" type="button" hidden>Design</button>
   <button class="ctl workonly cat-btn" data-jump="video" type="button" hidden>Video</button>
+</div>
+
+<div class="cs" id="cs-launch" hidden role="dialog" aria-modal="true" aria-labelledby="cs-launch-h">
+  <button class="cs-close" type="button">Close</button>
+  <article class="cs-body">
+    <p class="cs-kicker">CASE STUDY · CETS</p>
+    <h2 id="cs-launch-h">Launching CETS to $500K</h2>
+    <dl class="cs-facts"><div><dt>Role</dt><dd>Creative Director</dd></div><div><dt>Team</dt><dd>Led 2 to 3 artists, reported to the CEO and CTO</dd></div><div><dt>Result</dt><dd>$500K at launch</dd></div></dl>
+    <h3>The brief</h3>
+    <p>Give a brand-new brand a look, a voice and a world people would want to buy into, from day one.</p>
+    <h3>What I did</h3>
+    <ul><li>Set the design language every CETS asset was built on, including the custom CETS Neue typeface.</li><li>Directed the website with the UI/UX developers, from the landing hero to every page.</li><li>Led the launch campaign around the line “the lifestyle for the real and unapologetic.”</li><li>Built Cetsworld: the story, the characters and the four pillars the brand stands on.</li></ul>
+    <div class="cs-grid"><figure class="cs-fig wide"><img src="work/cd/fomo-t.webp" alt="FOMO × CETS campaign poster spread" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/cd/home-hero-t.webp" alt="cets.wtf home page hero: unapologetic and real" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/cd/pillars-t.webp" alt="The four pillars of CETS" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/cd/hl-4-t.webp" alt="FU Shades campaign poster" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/cd/iso-t.webp" alt="Cets on Creck isometric world illustration" loading="lazy" decoding="async"></figure></div>
+    <h3>The outcome</h3>
+    <ul class="cs-wins"><li><b>$500K</b> generated at launch</li><li><b>Featured</b> in FOMO</li><li><b>~50K</b> followers on X</li><li><b>Adult Swim</b>the world was strong enough to pitch as an animated series</li></ul>
+  </article>
+</div>
+<div class="cs" id="cs-merch" hidden role="dialog" aria-modal="true" aria-labelledby="cs-merch-h">
+  <button class="cs-close" type="button">Close</button>
+  <article class="cs-body">
+    <p class="cs-kicker">CASE STUDY · CETS</p>
+    <h2 id="cs-merch-h">Every drop sold out</h2>
+    <dl class="cs-facts"><div><dt>Role</dt><dd>Creative Director</dd></div><div><dt>Scope</dt><dd>Apparel, laces, shades, packaging, lookbooks, drop films</dd></div><div><dt>Result</dt><dd>Every drop sold out</dd></div></dl>
+    <h3>The brief</h3>
+    <p>Turn an online community into people wearing the brand, without it feeling like generic merch.</p>
+    <h3>What I did</h3>
+    <ul><li>Designed a launch drop of apparel, laces and shades, then follow-up apparel drops like Nights Like This and Midnight.</li><li>Treated every drop as a product, not a logo on a tee: built-in masks, puff prints, woven labels, foil cards.</li><li>Designed the unboxing too: dripping boxes, embossed packaging and black-on-black inserts.</li><li>Directed the lookbooks and drop films that announced each release.</li></ul>
+    <div class="cs-grid"><figure class="cs-fig"><img src="work/drip/hoodie-p-dt.webp" alt="313 hoodie with built-in mask" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/drip/look-1-dt.webp" alt="313 hoodie neon lookbook shot" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/merch/5-dt.webp" alt="Peb Log You embossed packaging" loading="lazy" decoding="async"></figure></div>
+    <h3>From mockup to unboxing</h3>
+    <div class="cs-grid"><figure class="cs-fig wide"><img src="work/mock/00.webp" alt="DRIP hoodie mockup, front and back" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/merch/3-dt.webp" alt="Cets on Creck black-on-black foil cards" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/merch/6-dt.webp" alt="Dripping Cets on Creck packaging box" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/merch/10-dt.webp" alt="FU Shades sunglasses poster" loading="lazy" decoding="async"></figure><figure class="cs-fig"><img src="work/merch/7-dt.webp" alt="Nights Like This tees" loading="lazy" decoding="async"></figure></div>
+    <div class="cs-vid"><video src="work/video/313-film.mp4" poster="work/video/313-film.jpg" preload="none" playsinline controls aria-label="313 drop film"></video></div>
+    <h3>The outcome</h3>
+    <ul class="cs-wins"><li><b>Every drop</b> sold out</li></ul>
+  </article>
 </div>
 
 <div class="hire" id="hire" hidden role="dialog" aria-modal="true" aria-labelledby="hireQ">
@@ -1319,7 +1382,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   let last = null, pinch = null, moved = 0, downTarget = null;
   vp.addEventListener("pointerdown", e => {
     if (e.button !== 0 && e.pointerType === "mouse") return;
-    if (e.target.closest && e.target.closest(".sticky a, .sticky .copy, .ipod-screen, .ipod-wheel, .flow-pop.open, .vid-wrap, .ui-visit, .proj-jump, .hire-btn")) return;
+    if (e.target.closest && e.target.closest(".sticky a, .sticky .copy, .ipod-screen, .ipod-wheel, .flow-pop.open, .vid-wrap, .ui-visit, .proj-jump, .hire-btn, .cs-open")) return;
     vp.setPointerCapture(e.pointerId);
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pts.size === 1) { last = { x: e.clientX, y: e.clientY }; moved = 0; downTarget = e.target; }
@@ -1466,6 +1529,10 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
     catch { const r = document.createRange(); r.selectNodeContents(hSum); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); btn.textContent = "Selected: copy it"; }
     setTimeout(() => btn.textContent = "Copy answers", 2200);
   };
+  let csOpener = null;
+  document.querySelectorAll(".cs-open").forEach(b => b.addEventListener("click", () => { csOpener = b; const c = document.getElementById(b.dataset.cs); c.hidden = false; c.scrollTop = 0; c.querySelector(".cs-close").focus(); }));
+  const csClose = c => { c.hidden = true; c.querySelectorAll("video").forEach(v => v.pause()); if (csOpener) csOpener.focus(); };
+  document.querySelectorAll(".cs").forEach(c => { c.querySelector(".cs-close").onclick = () => csClose(c); c.addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); csClose(c); } }); });
   const box = document.getElementById("lightbox");
   const resumeBtn = document.getElementById("resumeBtn");
   let opener = null;
@@ -1613,7 +1680,7 @@ h1.brand { margin: 0; font-weight: 400; line-height: 1.2; }
   pop.addEventListener("pointerup", () => { sx = null; }); pop.addEventListener("pointercancel", () => { sx = null; });
   document.addEventListener("pointerdown", e => { if (isOpen && !e.target.closest("#ipod, #flowPop, #lightbox")) flowClose(); }, true);
 
-  document.querySelectorAll(".vid-wrap").forEach(w => {
+  document.querySelectorAll(".vid-wrap").forEach(w => { if (!w.querySelector(".vid-play")) return;
     const v = w.querySelector("video"), b = w.querySelector(".vid-play");
     b.addEventListener("click", () => { v.controls = true; b.hidden = true; v.play().catch(() => {}); });
     v.addEventListener("play", () => document.querySelectorAll(".vid-wrap video").forEach(o => { if (o !== v) o.pause(); }));
